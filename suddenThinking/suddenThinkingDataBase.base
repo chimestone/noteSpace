@@ -1,0 +1,10 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder == "suddenThinking"
+        - file.basename != "suddenThinkingDataBase"
+    sort:
+      - property: file.name
+        direction: ASC

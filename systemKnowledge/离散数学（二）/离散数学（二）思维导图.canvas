@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"02da53ab1233a292","type":"file","file":"systemKnowledge/离散数学（二）/离散数学（二）.base","x":80,"y":-120,"width":400,"height":400},
+		{"id":"c218f39a241f7c92","type":"file","file":"systemKnowledge/离散数学（二）/第1章 数论和密码学.md","x":560,"y":-120,"width":400,"height":400},
+		{"id":"50e3acb64c30289d","x":560,"y":400,"width":400,"height":400,"type":"file","file":"systemKnowledge/离散数学（二）/第2章 计数.md"},
+		{"id":"8795b0a46f0a1c08","x":80,"y":400,"width":400,"height":400,"type":"file","file":"systemKnowledge/离散数学（二）/第3章 高级计数.md"},
+		{"id":"701e247ae02804c4","x":80,"y":880,"width":400,"height":400,"type":"file","file":"systemKnowledge/离散数学（二）/第4章 数理逻辑.md"}
+	],
+	"edges":[
+		{"id":"54cd0782c9114109","fromNode":"02da53ab1233a292","fromSide":"right","toNode":"c218f39a241f7c92","toSide":"left"},
+		{"id":"0adf7d74b0dd3123","fromNode":"c218f39a241f7c92","fromSide":"bottom","toNode":"50e3acb64c30289d","toSide":"top"},
+		{"id":"dfddff0732ff8c67","fromNode":"50e3acb64c30289d","fromSide":"left","toNode":"8795b0a46f0a1c08","toSide":"right"},
+		{"id":"2198b601e460de3b","fromNode":"8795b0a46f0a1c08","fromSide":"bottom","toNode":"701e247ae02804c4","toSide":"top"}
+	]
+}

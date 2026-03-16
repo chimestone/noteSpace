@@ -1,0 +1,23 @@
+views:
+  - type: cards
+    name: 视图
+    filters:
+      and:
+        - file.folder == "ToDoList"
+        - file.ext != "base"
+    groupBy:
+      property: progress
+      direction: ASC
+    order:
+      - file.name
+      - progress
+      - deadline
+    sort:
+      - property: deadline
+        direction: ASC
+  - type: table
+    name: 视图 2
+    filters:
+      and:
+        - file.folder == "ToDoList"
+        - file.ext != "base"

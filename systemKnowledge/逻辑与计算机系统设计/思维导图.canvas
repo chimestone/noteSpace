@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"fe816d85ccd6466b","x":20,"y":-160,"width":400,"height":380,"type":"file","file":"systemKnowledge/原子知识点/第一性原理.md"},
+		{"id":"3edb1261c132db37","x":118,"y":320,"width":205,"height":60,"type":"text","text":"逻辑与计算机系统设计"},
+		{"id":"c677e368434b11c2","x":460,"y":320,"width":250,"height":60,"type":"text","text":"第一章 - 数字系统与信息"},
+		{"id":"302e15c2d29c58ce","x":460,"y":480,"width":250,"height":60,"type":"text","text":"第二章 - 逻辑代数"},
+		{"id":"5d870313bf1eb03f","x":865,"y":380,"width":110,"height":60,"type":"text","text":"基本概念"},
+		{"id":"cd4cad283c6d4043","x":840,"y":492,"width":160,"height":90,"type":"text","text":"与门：与运算\n或门：或运算\n非门：非运算"},
+		{"id":"983a02970b3dc707","x":820,"y":642,"width":200,"height":134,"type":"text","text":"逻辑电路的三态：\n- 0\n- 1\n- 高阻抗（$R \\rightarrow \\infty$)"}
+	],
+	"edges":[
+		{"id":"e4b03933969892a6","fromNode":"3edb1261c132db37","fromSide":"top","toNode":"fe816d85ccd6466b","toSide":"bottom"},
+		{"id":"dc76b985321f8de7","fromNode":"c677e368434b11c2","fromSide":"bottom","toNode":"302e15c2d29c58ce","toSide":"top"},
+		{"id":"6508147c65b3a3b1","fromNode":"302e15c2d29c58ce","fromSide":"right","toNode":"5d870313bf1eb03f","toSide":"left"},
+		{"id":"e7cbe523ce411ef7","fromNode":"5d870313bf1eb03f","fromSide":"bottom","toNode":"cd4cad283c6d4043","toSide":"top"},
+		{"id":"7985613378dedc31","fromNode":"cd4cad283c6d4043","fromSide":"bottom","toNode":"983a02970b3dc707","toSide":"top"}
+	]
+}
