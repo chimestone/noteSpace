@@ -1,0 +1,30 @@
+{
+	"nodes":[
+		{"id":"74701c86874fd04a","type":"group","x":-960,"y":-960,"width":1360,"height":1360,"label":"袁春风教材目录"},
+		{"id":"96549a67a783233d","type":"text","text":"第一章 计算机系统概述","x":-380,"y":-700,"width":280,"height":60},
+		{"id":"2d5a03bbba0d7e2e","type":"text","text":"第二章 数据的机器级表示与处理","x":-380,"y":-550,"width":280,"height":60},
+		{"id":"3e43f46844829750","type":"text","text":"第一部分\n系统概述和可执行目标文件的生成","x":-860,"y":-500,"width":250,"height":100},
+		{"id":"6523a893b56601ec","type":"text","text":"第三章 程序的转换及机器级表示","x":-380,"y":-400,"width":280,"height":60},
+		{"id":"eb75737e4f7caf2b","type":"text","text":"第四章 程序的链接","x":-380,"y":-260,"width":280,"height":60},
+		{"id":"df19849f73f4ee70","type":"text","text":"第七章 异常控制流","x":-380,"y":170,"width":280,"height":60},
+		{"id":"f33f090c0371ad47","type":"text","text":"第八章 I/O操作的实现","x":-380,"y":270,"width":280,"height":60},
+		{"id":"b6ec6145d12450d9","type":"text","text":"第二部分\n可执行目标文件的运行","x":-860,"y":80,"width":250,"height":60},
+		{"id":"65be7ee769abccc3","type":"text","text":"第六章 层次结构存储系统","x":-380,"y":50,"width":280,"height":60},
+		{"id":"924d0c24aba339c5","type":"text","text":"第五章 程序的执行","x":-380,"y":-70,"width":280,"height":60},
+		{"id":"87073383fad150af","type":"text","text":"1.1 计算机发展历程[[1.1 计算机发展历程.canvas|>>指路]]","x":40,"y":-940,"width":250,"height":60},
+		{"id":"35e6a76edec63863","type":"text","text":"1.2 计算机系统的基本功能和基本组成[[1.2 计算机系统的基本功能和基本组成.canvas|>>指路]]","x":40,"y":-840,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"a0472a445087fe23","fromNode":"3e43f46844829750","fromSide":"right","toNode":"96549a67a783233d","toSide":"left"},
+		{"id":"8745fa28e6ecb1c0","fromNode":"3e43f46844829750","fromSide":"right","toNode":"2d5a03bbba0d7e2e","toSide":"left"},
+		{"id":"3cc13686b66361e2","fromNode":"3e43f46844829750","fromSide":"right","toNode":"6523a893b56601ec","toSide":"left"},
+		{"id":"fe2c7d0457d87eeb","fromNode":"3e43f46844829750","fromSide":"right","toNode":"eb75737e4f7caf2b","toSide":"left"},
+		{"id":"dd0df69c98ee2081","fromNode":"b6ec6145d12450d9","fromSide":"right","toNode":"924d0c24aba339c5","toSide":"left"},
+		{"id":"213a8e3ea349da31","fromNode":"b6ec6145d12450d9","fromSide":"right","toNode":"65be7ee769abccc3","toSide":"left"},
+		{"id":"b72c3716678ea4ae","fromNode":"b6ec6145d12450d9","fromSide":"right","toNode":"df19849f73f4ee70","toSide":"left"},
+		{"id":"e555c7360fcb890d","fromNode":"b6ec6145d12450d9","fromSide":"right","toNode":"f33f090c0371ad47","toSide":"left"},
+		{"id":"2a5f69ececc1fbc0","fromNode":"96549a67a783233d","fromSide":"right","toNode":"87073383fad150af","toSide":"left"},
+		{"id":"f34ba622b7c4d9bc","fromNode":"96549a67a783233d","fromSide":"right","toNode":"35e6a76edec63863","toSide":"left"},
+		{"id":"6a5af7758bd6e526","fromNode":"3e43f46844829750","fromSide":"bottom","toNode":"b6ec6145d12450d9","toSide":"top"}
+	]
+}

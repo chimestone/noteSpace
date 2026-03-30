@@ -1,0 +1,19 @@
+formulas:
+  未命名: ""
+views:
+  - type: cards
+    name: 图书
+    filters:
+      and:
+        - file.folder == "Books"
+        - file.ext != "base"
+        - display == true
+    groupBy:
+      property: bookKind
+      direction: ASC
+    order:
+      - file.name
+      - author
+      - progress
+    image: note.cover
+    cardSize: 210

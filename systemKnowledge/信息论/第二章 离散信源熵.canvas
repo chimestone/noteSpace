@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"3d413c3eb5e03d58","type":"text","text":"信息论是什么？","x":-200,"y":80,"width":160,"height":60},
+		{"id":"b64a17ead0f3061c","type":"text","text":"信息论是在信息可度量的情况下，研究有效的，可靠的，安全的传递信息的科学。","x":-40,"y":180,"width":340,"height":60},
+		{"id":"1557d3f2659c00b1","type":"text","text":"信息的**可度量性**是建立信息论的**基础**。","x":360,"y":180,"width":250,"height":60},
+		{"id":"436971aab0e33101","type":"text","text":"如何度量？","x":360,"y":320,"width":250,"height":60},
+		{"id":"7a66136d9adecd4d","type":"file","file":"systemKnowledge/原子知识点/自信息量.md","x":760,"y":520,"width":400,"height":400},
+		{"id":"48df2b6baad634ed","type":"file","file":"systemKnowledge/原子知识点/信源熵.md","x":1240,"y":520,"width":400,"height":400},
+		{"id":"8c991ced67a38ca5","type":"text","text":"信源分类","x":360,"y":20,"width":250,"height":60},
+		{"id":"3aa05fb256f0d635","type":"text","text":"离散信源","x":780,"y":-100,"width":250,"height":60},
+		{"id":"42a5933e92604a7c","type":"text","text":"连续信源","x":780,"y":20,"width":250,"height":60},
+		{"id":"944d4cd2add9bc7c","type":"text","text":"单符号离散信源","x":1170,"y":-200,"width":250,"height":60},
+		{"id":"ede3d9a558264c81","type":"text","text":"多符号离散信源","x":1170,"y":-100,"width":250,"height":60},
+		{"id":"193adf4a3f2f0696","type":"file","file":"systemKnowledge/原子知识点/单符号离散信源.md","x":285,"y":520,"width":400,"height":400},
+		{"id":"983d20cf34c1684e","type":"file","file":"systemKnowledge/原子知识点/多符号离散平稳信源.md","x":285,"y":1040,"width":400,"height":400},
+		{"id":"0fb5193a288fbe90","type":"file","file":"systemKnowledge/原子知识点/损失函数与交叉熵.md","x":2120,"y":920,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"a1f67fa74a93c1f5","fromNode":"3d413c3eb5e03d58","fromSide":"bottom","toNode":"b64a17ead0f3061c","toSide":"left"},
+		{"id":"70feebf32703a809","fromNode":"b64a17ead0f3061c","fromSide":"right","toNode":"1557d3f2659c00b1","toSide":"left"},
+		{"id":"5181b67a85513a7e","fromNode":"1557d3f2659c00b1","fromSide":"bottom","toNode":"436971aab0e33101","toSide":"top"},
+		{"id":"14d8540d66751eea","fromNode":"436971aab0e33101","fromSide":"right","toNode":"48df2b6baad634ed","toSide":"top"},
+		{"id":"b3883f319393090e","fromNode":"436971aab0e33101","fromSide":"right","toNode":"7a66136d9adecd4d","toSide":"top"},
+		{"id":"5b4bc9b41552dc3b","fromNode":"3aa05fb256f0d635","fromSide":"right","toNode":"ede3d9a558264c81","toSide":"left"},
+		{"id":"4b02bed4fc5fe63d","fromNode":"3aa05fb256f0d635","fromSide":"right","toNode":"944d4cd2add9bc7c","toSide":"left"},
+		{"id":"cc9fd7a8b5a6b19f","fromNode":"8c991ced67a38ca5","fromSide":"right","toNode":"42a5933e92604a7c","toSide":"left"},
+		{"id":"2c2bfa7707660077","fromNode":"8c991ced67a38ca5","fromSide":"right","toNode":"3aa05fb256f0d635","toSide":"left"},
+		{"id":"0eb0fd4b3e80a919","fromNode":"1557d3f2659c00b1","fromSide":"top","toNode":"8c991ced67a38ca5","toSide":"bottom"},
+		{"id":"9e49d8fb7c87bbaa","fromNode":"436971aab0e33101","fromSide":"bottom","toNode":"193adf4a3f2f0696","toSide":"top"},
+		{"id":"646de678b0c8ad6e","fromNode":"193adf4a3f2f0696","fromSide":"right","toNode":"7a66136d9adecd4d","toSide":"left"},
+		{"id":"ed8bf2cdc5a0c085","fromNode":"7a66136d9adecd4d","fromSide":"right","toNode":"48df2b6baad634ed","toSide":"left"},
+		{"id":"321878fb01132bd9","fromNode":"48df2b6baad634ed","fromSide":"right","toNode":"0fb5193a288fbe90","toSide":"top","label":"补充内容"},
+		{"id":"aa49f3c64d217f78","fromNode":"193adf4a3f2f0696","fromSide":"bottom","toNode":"983d20cf34c1684e","toSide":"top"}
+	]
+}

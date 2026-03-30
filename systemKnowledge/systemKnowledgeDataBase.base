@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - kind == ["systemKnowledge"]
+    order:
+      - file.name
+      - knowledgeKind
+      - kind
+    columnSize:
+      file.name: 311
+      note.knowledgeKind: 451

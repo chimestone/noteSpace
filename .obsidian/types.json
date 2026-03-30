@@ -1,0 +1,16 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "progress": "checkbox",
+    "knowledgeKind": "multitext",
+    "cover": "text",
+    "阅读方式": "multitext",
+    "display": "checkbox",
+    "property": "multitext",
+    "kind": "multitext",
+    "p": "text",
+    "bookKind": "multitext"
+  }
+}

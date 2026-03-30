@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"fe816d85ccd6466b","type":"file","file":"systemKnowledge/原子知识点/第一性原理.md","x":20,"y":-160,"width":400,"height":380},
+		{"id":"3edb1261c132db37","type":"text","text":"逻辑与计算机系统设计","x":118,"y":320,"width":205,"height":60},
+		{"id":"c677e368434b11c2","type":"text","text":"第一章 - 数字系统与信息","x":460,"y":320,"width":250,"height":60},
+		{"id":"302e15c2d29c58ce","type":"text","text":"第二章 - 逻辑代数","x":460,"y":480,"width":250,"height":60},
+		{"id":"f15fa9a8ce917f91","type":"file","file":"systemKnowledge/原子知识点/逻辑代数.md","x":1000,"y":310,"width":400,"height":400},
+		{"id":"4af05c8c3a5b8c53","x":460,"y":640,"width":250,"height":60,"type":"text","text":"第三章 - 数据表示"},
+		{"id":"6c548d0ed915cd12","x":-82,"y":540,"width":400,"height":400,"type":"file","file":"systemKnowledge/原子知识点/数据表示.md"}
+	],
+	"edges":[
+		{"id":"e4b03933969892a6","fromNode":"3edb1261c132db37","fromSide":"top","toNode":"fe816d85ccd6466b","toSide":"bottom"},
+		{"id":"dc76b985321f8de7","fromNode":"c677e368434b11c2","fromSide":"bottom","toNode":"302e15c2d29c58ce","toSide":"top"},
+		{"id":"55a2ad9620ea4c92","fromNode":"302e15c2d29c58ce","fromSide":"right","toNode":"f15fa9a8ce917f91","toSide":"left"},
+		{"id":"c3b3587628e5deef","fromNode":"302e15c2d29c58ce","fromSide":"bottom","toNode":"4af05c8c3a5b8c53","toSide":"top"},
+		{"id":"6bbf33cacbfa4689","fromNode":"4af05c8c3a5b8c53","fromSide":"left","toNode":"6c548d0ed915cd12","toSide":"right"}
+	]
+}

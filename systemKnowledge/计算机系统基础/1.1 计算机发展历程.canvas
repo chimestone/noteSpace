@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"8200473d3250495f","type":"text","text":"第一台计算机\nENIAC(Electronic Numberical Intergrator and Computer)\n电子数字积分机与计算机\n1946年 美国","x":-310,"y":-100,"width":490,"height":115},
+		{"id":"fb6d628efb1cd390","type":"text","text":"第一代\n电子管计算机\n20世纪40年代中期-20世纪50年代末","x":-224,"y":120,"width":319,"height":100},
+		{"id":"3346bd71e840cc64","type":"text","text":"第二代\n晶体管计算机","x":-189,"y":280,"width":250,"height":60},
+		{"id":"cd1a2a85e79f03c9","type":"text","text":"第三代\n集成电路计算机","x":-189,"y":400,"width":250,"height":60},
+		{"id":"fcf433869113ca5e","type":"text","text":"第四代\n超大规模集成电路计算机","x":-189,"y":520,"width":250,"height":60},
+		{"id":"fe1bd94762bfdf7a","type":"text","text":"计算机的发展历程","x":-145,"y":-220,"width":206,"height":60},
+		{"id":"4a36925ef29d810c","x":240,"y":550,"width":400,"height":400,"type":"file","file":"systemKnowledge/原子知识点/摩尔定律.md"}
+	],
+	"edges":[
+		{"id":"07e7f0f156b76a6f","fromNode":"fb6d628efb1cd390","fromSide":"bottom","toNode":"3346bd71e840cc64","toSide":"top"},
+		{"id":"243e2a0b2186edb8","fromNode":"8200473d3250495f","fromSide":"bottom","toNode":"fb6d628efb1cd390","toSide":"top"},
+		{"id":"68a8c956d16b46ed","fromNode":"3346bd71e840cc64","fromSide":"bottom","toNode":"cd1a2a85e79f03c9","toSide":"top"},
+		{"id":"0330d98d0c80c47c","fromNode":"cd1a2a85e79f03c9","fromSide":"bottom","toNode":"fcf433869113ca5e","toSide":"top"},
+		{"id":"ae8d04e5a68a6354","fromNode":"fcf433869113ca5e","fromSide":"right","toNode":"4a36925ef29d810c","toSide":"left"}
+	]
+}

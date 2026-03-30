@@ -1,0 +1,19 @@
+views:
+  - type: cards
+    name: 视图
+    filters:
+      and:
+        - file.folder == "ToDoList"
+        - file.ext != "base"
+    groupBy:
+      property: progress
+      direction: ASC
+    order:
+      - file.name
+      - progress
+      - deadline
+    sort:
+      - property: deadline
+        direction: DESC
+    cardSize: 200
+    imageAspectRatio: 0.65
