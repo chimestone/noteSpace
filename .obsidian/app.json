@@ -24,6 +24,8 @@
     "editor:indent-list",
     "editor:unindent-list",
     "editor:configure-toolbar",
-    "insert-current-time"
+    "insert-current-time",
+    "editor:insert-codeblock",
+    "editor:insert-mathblock"
   ]
 }

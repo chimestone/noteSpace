@@ -7,5 +7,7 @@ views:
     order:
       - file.name
       - knowledgeKind
+      - kind
     columnSize:
-      file.name: 1254
+      file.name: 311
+      note.knowledgeKind: 451

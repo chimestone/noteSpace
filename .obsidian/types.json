@@ -9,6 +9,8 @@
     "阅读方式": "multitext",
     "display": "checkbox",
     "property": "multitext",
-    "kind": "multitext"
+    "kind": "multitext",
+    "p": "text",
+    "bookKind": "multitext"
   }
 }

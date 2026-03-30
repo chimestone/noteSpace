@@ -4,6 +4,8 @@ kind:
 knowledgeKind:
   - computerScience
 ---
+FHE 全同态加密
+fully homomorphic encryption
 # 概述
 这是一种允许在加密数据上进行运算的加密技术，计算结果仍然是加密的，以保护数据隐私。
 # 和同态加密的区别

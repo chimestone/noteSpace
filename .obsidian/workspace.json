@@ -4,24 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "244169a4261a490b",
+        "id": "04afe083fc3b6123",
         "type": "tabs",
         "children": [
           {
-            "id": "9ef0863f3d3ee16a",
+            "id": "b1fe484ba2a3b96c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "systemKnowledge/大创/思维导图.canvas",
-                "viewState": {
-                  "x": 1160,
-                  "y": -532.5,
-                  "zoom": -3.2274104961030727
-                }
+                "file": "index.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "思维导图"
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -56,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "[\"display\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c978e5af76b029c6",
@@ -123,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "systemKnowledge/大创/思维导图.canvas",
+                "file": "systemKnowledge/信息论/第二章 离散信源熵.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "思维导图 的反向链接列表"
+              "title": "第二章 离散信源熵 的反向链接列表"
             }
           },
           {
@@ -142,12 +138,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "systemKnowledge/大创/思维导图.canvas",
+                "file": "systemKnowledge/信息论/第二章 离散信源熵.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "思维导图 的出链列表"
+              "title": "第二章 离散信源熵 的出链列表"
             }
           },
           {
@@ -190,11 +186,12 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,96 +210,63 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "3e29ff1d78d30d85",
-    "type": "floating",
-    "children": [
-      {
-        "id": "82ac7f24fe39b070",
-        "type": "window",
-        "children": [
-          {
-            "id": "34648c6d8755c45a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5307a0825bb80fd3",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "systemKnowledge/大创/参考资料/CryptoFace End-to-End Encrypted Face Recognition.pdf",
-                    "page": 1,
-                    "left": -18,
-                    "top": 796,
-                    "zoom": 0.8909313725490197
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "CryptoFace End-to-End Encrypted Face Recognition"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -2936,
-        "y": -363,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 1.5
-      }
-    ]
-  },
-  "active": "9ef0863f3d3ee16a",
+  "active": "b1fe484ba2a3b96c",
   "lastOpenFiles": [
-    "systemKnowledge/大创/参考资料/CryptoFace End-to-End Encrypted Face Recognition.pdf",
-    "systemKnowledge/大创/思维导图.canvas",
-    "systemKnowledge/计算机系统基础/1.2 计算机系统的基本功能和基本组成.canvas",
-    "systemKnowledge/信息论/信源熵.md",
-    "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
+    "ToDoList/QQ群内容补充.md",
+    "index.md",
+    "ToDoList/第二章内容复习.md",
+    "suddenThinking/未命名.md",
+    "suddenThinking/随手记录.md",
+    "suddenThinking/第二章 作业题1.md",
+    "suddenThinking/第二章 作业题3.md",
+    "suddenThinking/第二章 作业题2.md",
+    "Books/BooksDataBase.base",
+    "Books/JAVA从入门到精通.md",
+    "Books/Hello Algo.md",
+    "Books/CSAPP.md",
+    "Books/这才是心理学.md",
+    "Books/愿有人陪你颠沛流离.md",
+    "Books/围城.md",
+    "Books/完全学会Git.md",
+    "Books/俗世奇人.md",
+    "Books/数据库系统概论.md",
+    "Books/荣格分析心理学导论.md",
+    "Books/岛上书店.md",
+    "E-book/Java从入门到精通（第5版） (明日科技) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "images/JAVA入门到精通.png",
+    "images/屏幕截图 2026-03-30 214359.png",
+    "E-book/Computer_Systems__A_Programmer_Perspective_3rd_.pdf ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "images/CSAPP.png",
+    "images/屏幕截图 2026-03-30 214334.png",
+    "E-book/围城 (出版七十周年纪念版) (钱锺书) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "E-book/完全学会Git Github Git Server的24堂课 (孙宏明) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "E-book/俗世奇人全本 (冯骥才) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "images/完全学会git.png",
+    "images/屏幕截图 2026-03-30 214116.png",
+    "images/俗世奇人.png",
+    "images/屏幕截图 2026-03-30 214038.png",
+    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "images/数据库系统概论.png",
+    "images/屏幕截图 2026-03-30 214002.png",
+    "E-book/计算机系统基础_袁春风.pdf",
+    "systemKnowledge/CSAPP/Start/从代码到可执行文件.md",
+    "systemKnowledge/CSAPP/First of All.md",
+    "systemKnowledge/CSAPP/Start",
+    "systemKnowledge/CSAPP",
+    "systemKnowledge/逻辑与计算机系统设计/newLearnProgress/未命名.md",
     "systemKnowledge/计算机系统基础/整体导图.canvas",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
-    "systemKnowledge/原子知识点/摩尔定律.md",
-    "index.md",
-    "ToDoList/QQ群内容补充.md",
-    "systemKnowledge/systemKnowledgeDataBase.base",
-    "systemKnowledge/计算机系统基础/未命名.md",
-    "systemKnowledge/原子知识点/密态神经网络.md",
-    "systemKnowledge/原子知识点/全同态加密.md",
-    "systemKnowledge/原子知识点/神经网络.md",
-    "systemKnowledge/原子知识点/同态加密.md",
-    "systemKnowledge/大创/现有内容.md",
-    "systemKnowledge/原子知识点/自举技术.md",
-    "systemKnowledge/原子知识点/CryptoFace-端到端加密的人脸识别.md",
+    "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
+    "systemKnowledge/计算机系统基础/1.2 计算机系统的基本功能和基本组成.canvas",
     "systemKnowledge/逻辑与计算机系统设计/思维导图.canvas",
-    "systemKnowledge/逻辑与计算机系统设计/逻辑与计算机系统设计.base",
-    "systemKnowledge/原子知识点/第一性原理.md",
-    "systemKnowledge/信息论/信息论与编码 第四版.md",
-    "systemKnowledge/原子知识点/科四神秘小笔记.md",
-    "systemKnowledge/游戏本选购.md",
-    "systemKnowledge/原子知识点/yaml.md",
-    "systemKnowledge/原子知识点",
-    "systemKnowledge/计算机系统基础/未命名",
-    "systemKnowledge/信息论",
-    "Books/岛上书店.md",
-    "未命名.canvas",
-    "systemKnowledge/离散数学（二）/第3章 高级计数.md",
-    "suddenThinking/Untitled.md",
-    "systemKnowledge/大创/参考资料/Zh CryptoFace End-to-End Encrypted Face Recognition.pdf",
-    "systemKnowledge/计算机系统基础/未命名vs2022.md",
-    "systemKnowledge/计算机系统基础",
-    "systemKnowledge/大创/参考资料",
-    "systemKnowledge/大创/新建文件夹",
-    "dailyRecord/2026-03-03.md",
-    "dailyRecord/2026-03-04.md",
-    "ToDoList/2026春季体育慕课.md",
-    "ToDoList/www.icourses.cn.md",
+    "systemKnowledge/逻辑与计算机系统设计/第四章 组合逻辑电路.md",
+    "dailyRecord/2026-03-24.md",
+    "dailyRecord/2026-03-17.md",
+    "dailyRecord/2026-03-16.md",
+    "systemKnowledge/大创/思维导图.canvas",
+    "systemKnowledge/信息论/第二章 离散信源熵.canvas",
     "systemKnowledge/离散数学（二）/离散数学（二）思维导图.canvas",
-    "systemKnowledge/未命名.canvas",
-    "images/愿有人陪你颠沛流离.jpg",
-    "images/岛上书店.png",
-    "images/岛上书店.jpeg",
-    "images/OIP-C.webp"
+    "未命名.canvas",
+    "systemKnowledge/未命名.canvas"
   ]
 }

@@ -8,9 +8,12 @@ views:
         - file.folder == "Books"
         - file.ext != "base"
         - display == true
+    groupBy:
+      property: bookKind
+      direction: ASC
     order:
       - file.name
       - author
       - progress
     image: note.cover
-    cardSize: 300
+    cardSize: 210

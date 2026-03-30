@@ -7,5 +7,21 @@
       "key": "T"
     }
   ],
-  "workspace:new-tab": []
+  "workspace:new-tab": [],
+  "editor:insert-mathblock": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "editor:insert-codeblock": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
+    }
+  ]
 }
