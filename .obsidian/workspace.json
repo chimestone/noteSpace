@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "04afe083fc3b6123",
+        "id": "2da041cc5540cfe1",
         "type": "tabs",
         "children": [
           {
-            "id": "b1fe484ba2a3b96c",
+            "id": "b3dbf89d1641455b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
+                "file": "systemKnowledge/大创/思维导图.canvas",
+                "viewState": {
+                  "x": 1384.651376879771,
+                  "y": 1644.3188710590236,
+                  "zoom": -0.6666666666666667
+                }
               },
-              "icon": "lucide-file",
-              "title": "index"
+              "icon": "lucide-layout-dashboard",
+              "title": "思维导图"
             }
           }
         ]
@@ -119,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "systemKnowledge/信息论/第二章 离散信源熵.canvas",
+                "file": "systemKnowledge/大创/思维导图.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "第二章 离散信源熵 的反向链接列表"
+              "title": "思维导图 的反向链接列表"
             }
           },
           {
@@ -186,7 +189,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -210,60 +213,59 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b1fe484ba2a3b96c",
+  "active": "b3dbf89d1641455b",
   "lastOpenFiles": [
-    "README.md",
-    "ToDoList/QQ群内容补充.md",
-    "index.md",
-    "ToDoList/第二章内容复习.md",
-    "suddenThinking/未命名.md",
-    "suddenThinking/随手记录.md",
-    "suddenThinking/第二章 作业题1.md",
-    "suddenThinking/第二章 作业题3.md",
+    "systemKnowledge/原子知识点/神经网络：高吞吐量与可靠性.md",
+    "systemKnowledge/大创/思维导图.canvas",
+    "systemKnowledge/大创/参考资料/Zh CryptoNets Applying Neural Networks to Encrypted Data with High Throughput and Accuracy.pdf",
+    "systemKnowledge/原子知识点/随机预言模型的特殊可靠性.md",
+    "systemKnowledge/大创/参考资料/CryptoNets Applying Neural Networks to Encrypted Data with High Throughput and Accuracy_dual_智谱4Flash.pdf",
+    "systemKnowledge/大创/参考资料/Zh Special Soundness in the Random Oracle Model.pdf",
+    "systemKnowledge/原子知识点/CryptoFace-端到端加密的人脸识别.md",
+    "systemKnowledge/原子知识点/近似数算数的同态加密.md",
+    "systemKnowledge/大创/技术文档.md",
+    "systemKnowledge/大创/参考资料/Zh Homomorphic Encryption for Arithmetic of Approximate Numbers.pdf",
+    "systemKnowledge/大创/参考资料/CryptoNets Applying Neural Networks to Encrypted Data with High Throughput and Accuracy.pdf",
+    "systemKnowledge/大创/参考资料/Special Soundness in the Random Oracle Model.pdf",
+    "未命名.md",
+    "未命名 1.md",
+    "systemKnowledge/大创/现有内容.md",
+    "systemKnowledge/大创/路线思考.md",
     "suddenThinking/第二章 作业题2.md",
-    "Books/BooksDataBase.base",
-    "Books/JAVA从入门到精通.md",
-    "Books/Hello Algo.md",
-    "Books/CSAPP.md",
-    "Books/这才是心理学.md",
-    "Books/愿有人陪你颠沛流离.md",
-    "Books/围城.md",
-    "Books/完全学会Git.md",
-    "Books/俗世奇人.md",
+    "suddenThinking/第二章 作业题3.md",
+    "suddenThinking/随手记录.md",
+    "suddenThinking/Untitled.md",
+    "suddenThinking/未命名.md",
+    "systemKnowledge/大创/学习路径.md",
+    "systemKnowledge/大创/参考资料/Homomorphic Encryption for Arithmetic of Approximate Numbers_dual_智谱4Flash.pdf",
+    "systemKnowledge/大创/参考资料/Homomorphic Encryption for Arithmetic of Approximate Numbers.pdf",
+    "大创",
+    "E-book/俗世奇人全本 (冯骥才) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "dailyRecord/2026-04-05.md",
+    "systemKnowledge/数据库系统基础/数据库.md",
+    "systemKnowledge/CSAPP/book/速记.md",
+    "systemKnowledge/CSAPP/book/资料指路.md",
+    "systemKnowledge/CSAPP/video/从代码到可执行文件.md",
     "Books/数据库系统概论.md",
-    "Books/荣格分析心理学导论.md",
-    "Books/岛上书店.md",
-    "E-book/Java从入门到精通（第5版） (明日科技) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "systemKnowledge/逻辑与计算机系统设计/第四章 组合逻辑电路设计.md",
+    "systemKnowledge/逻辑与计算机系统设计/newLearnProgress/未命名.md",
+    "Books/完全学会Git.md",
+    "index.md",
     "images/JAVA入门到精通.png",
     "images/屏幕截图 2026-03-30 214359.png",
-    "E-book/Computer_Systems__A_Programmer_Perspective_3rd_.pdf ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "images/CSAPP.png",
     "images/屏幕截图 2026-03-30 214334.png",
-    "E-book/围城 (出版七十周年纪念版) (钱锺书) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-    "E-book/完全学会Git Github Git Server的24堂课 (孙宏明) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-    "E-book/俗世奇人全本 (冯骥才) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "images/完全学会git.png",
     "images/屏幕截图 2026-03-30 214116.png",
     "images/俗世奇人.png",
     "images/屏幕截图 2026-03-30 214038.png",
-    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "images/数据库系统概论.png",
     "images/屏幕截图 2026-03-30 214002.png",
-    "E-book/计算机系统基础_袁春风.pdf",
-    "systemKnowledge/CSAPP/Start/从代码到可执行文件.md",
-    "systemKnowledge/CSAPP/First of All.md",
-    "systemKnowledge/CSAPP/Start",
-    "systemKnowledge/CSAPP",
-    "systemKnowledge/逻辑与计算机系统设计/newLearnProgress/未命名.md",
     "systemKnowledge/计算机系统基础/整体导图.canvas",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
     "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
     "systemKnowledge/计算机系统基础/1.2 计算机系统的基本功能和基本组成.canvas",
     "systemKnowledge/逻辑与计算机系统设计/思维导图.canvas",
-    "systemKnowledge/逻辑与计算机系统设计/第四章 组合逻辑电路.md",
-    "dailyRecord/2026-03-24.md",
-    "dailyRecord/2026-03-17.md",
-    "systemKnowledge/大创/思维导图.canvas",
     "systemKnowledge/信息论/第二章 离散信源熵.canvas",
     "systemKnowledge/离散数学（二）/离散数学（二）思维导图.canvas",
     "未命名.canvas",

@@ -11,6 +11,7 @@
     "property": "multitext",
     "kind": "multitext",
     "p": "text",
-    "bookKind": "multitext"
+    "bookKind": "multitext",
+    "link": "multitext"
   }
 }
