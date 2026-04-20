@@ -1,0 +1,103 @@
+{
+  "items": [
+    {
+      "type": "url",
+      "ctime": 1776091207246,
+      "url": "https://chat.deepseek.com/",
+      "title": "DeepSeek - 探索未至之境"
+    },
+    {
+      "type": "url",
+      "ctime": 1776091376017,
+      "url": "https://github.com/",
+      "title": "GitHub"
+    },
+    {
+      "type": "group",
+      "ctime": 1776091260469,
+      "items": [
+        {
+          "type": "url",
+          "ctime": 1776091414783,
+          "url": "https://www.runoob.com/",
+          "title": "菜鸟教程"
+        },
+        {
+          "type": "url",
+          "ctime": 1776091486392,
+          "url": "https://w3schools.org.cn/#google_vignette",
+          "title": "W3Schools 在线网页教程 - W3Schools 教程"
+        },
+        {
+          "type": "url",
+          "ctime": 1776091581701,
+          "url": "https://hansimov.gitbook.io/csapp",
+          "title": "本电子书信息 | 深入理解计算机系统（CSAPP）"
+        },
+        {
+          "type": "url",
+          "ctime": 1776237266839,
+          "url": "https://www.zhihu.com/",
+          "title": "(33 封私信 / 18 条消息) 首页 - 知乎"
+        },
+        {
+          "type": "url",
+          "ctime": 1776239222640,
+          "url": "https://dtmobile.yunxuetang.cn/study/#/userhome",
+          "title": "我的学习 - 学唐online"
+        }
+      ],
+      "title": "知识"
+    },
+    {
+      "type": "group",
+      "ctime": 1776091305597,
+      "items": [],
+      "title": "实用"
+    },
+    {
+      "type": "group",
+      "ctime": 1776125332270,
+      "items": [
+        {
+          "type": "url",
+          "ctime": 1776125343434,
+          "url": "https://figmeme.app/",
+          "title": "Fig.meme — Turn any photo into a paper figure"
+        },
+        {
+          "type": "url",
+          "ctime": 1776177782873,
+          "url": "https://glitchedreme.github.io/SlayTheSpire2ModdingTutorials/index.html",
+          "title": "杀戮尖塔2mod制作教程 - 杀戮尖塔2mod制作教程"
+        }
+      ],
+      "title": "娱乐"
+    },
+    {
+      "type": "group",
+      "ctime": 1776136924759,
+      "items": [
+        {
+          "type": "url",
+          "ctime": 1776136938992,
+          "url": "https://open.bigmodel.cn/",
+          "title": "智谱AI开放平台"
+        },
+        {
+          "type": "url",
+          "ctime": 1776166394002,
+          "url": "https://cloud.siliconflow.cn/me/models",
+          "title": "SiliconCloud"
+        },
+        {
+          "type": "url",
+          "ctime": 1776166744141,
+          "url": "https://platform.moonshot.cn/",
+          "title": "Kimi API 开放平台"
+        }
+      ],
+      "title": "ai"
+    }
+  ]
+}
