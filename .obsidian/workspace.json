@@ -4,23 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "9ea0d816d31054b5",
+        "id": "54948c017e4c02b9",
         "type": "tabs",
         "children": [
           {
-            "id": "cbba94776df510fa",
+            "id": "dbf07177c6cdcbbb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "f50f8eba7e19beae",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-                "page": 200,
-                "left": -8,
-                "top": 410,
-                "zoom": 1.9177946837476956
+                "file": "E-book/信息论与编码 第4版 (陈运 陈新 陈伟建) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+                "page": 81,
+                "left": -6,
+                "top": 150,
+                "zoom": 2.473505022477946
               },
               "icon": "lucide-file-text",
-              "title": "数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk)"
+              "title": "信息论与编码 第4版 (陈运 陈新 陈伟建) (z-library.sk, 1lib.sk, z-lib.sk)"
             }
           }
         ]
@@ -55,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "竞争",
+                "query": "行可排列",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c978e5af76b029c6",
@@ -203,8 +216,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 461,
-    "collapsed": true
+    "width": 461
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,24 +237,32 @@
       "xournalpp:Create new Xournal++ note": false
     }
   },
-  "active": "cbba94776df510fa",
+  "active": "aca8623bd1eeec13",
   "lastOpenFiles": [
+    "copilot/memory/Recent Conversations.md",
+    "suddenThinking/随手记录.md",
+    "E-book/信息论与编码 第4版 (陈运 陈新 陈伟建) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "copilot/copilot-conversations/信息论行可排列@20260424_170734.md",
+    "systemKnowledge/信息论/第四章 离散信道容量.md",
+    "systemKnowledge/信息论/第五章 纠错编码.md",
+    "systemKnowledge/obsidian插件.md",
+    "systemKnowledge/计算机系统基础/cat命令.md",
+    "OldFile/大二/大二（下）/计算机系统基础/实验/computerSystemBasicExp/exp4/Pragh1.md",
+    "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
+    "systemKnowledge/计算机系统基础/编译开关.md",
+    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "Books/数据库系统概论.md",
     "copilot/copilot-conversations/问候交流@20260414_115013.md",
     "copilot/copilot-conversations/文件内容总结@20260414_200747.md",
     "copilot/copilot-conversations/笔记文件夹总结@20260414_113834.md",
-    "copilot/memory/Recent Conversations.md",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(一）-2026.pdf",
-    "systemKnowledge/信息论/第五章 纠错编码.md",
     "OldFile/大二/大二（下）/信息论/课件/第5章 纠错编码.pdf",
     "OldFile/大二/大二（下）/信息论/课件/第5章 纠错编码(1).pdf",
     "index.md",
     "ToDoList/java知识点粗读.md",
     "E-book/Computer_Systems__A_Programmer_Perspective_3rd_.pdf ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "Books/CSAPP.md",
-    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "suddenThinking/数据库作业.md",
-    "suddenThinking/随手记录.md",
     "OldFile/大二/大二（下）/计算机系统基础/实验/bomb/skip_endbr64.c",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础 第五章 运算方法与运算器(三)- 乘法与除法运算-2026.pdf",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第五章 运算方法与运算器(二)-浮点数加法运算-2026.pdf",
@@ -254,17 +274,9 @@
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题2.md",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题2.pdf",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题3.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题3.pdf",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第四章 作业题3.md",
     "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第四章 作业题1.md",
     "systemKnowledge/原子知识点/数据表示.md",
-    "systemKnowledge/原子知识点/格雷码优越性.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/未命名.md",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/bomb/ans.md",
-    "copilot/copilot-conversations/Greeting_in_Chinese@20260415_231922.md",
-    "systemKnowledge/大唐杯/通感技术的场景化解决方案.md",
-    "systemKnowledge/大唐杯/卫星产品分类分级及轨道.md",
-    "systemKnowledge/大唐杯/人工智能与机器学习-神经网络/第一章 神经网络.md",
     "images/Pasted image 20260414093718.png",
     "Pasted image 20260414093718.png",
     "Pasted image 20260410163701.png",
@@ -277,7 +289,6 @@
     "images/完全学会git.png",
     "systemKnowledge/计算机系统基础/整体导图.canvas",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
-    "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
     "systemKnowledge/计算机系统基础/1.2 计算机系统的基本功能和基本组成.canvas",
     "systemKnowledge/逻辑与计算机系统设计/思维导图.canvas",
     "systemKnowledge/离散数学（二）/离散数学（二）思维导图.canvas",
