@@ -4,37 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "54948c017e4c02b9",
+        "id": "486a2cd2c26b8ee6",
         "type": "tabs",
         "children": [
           {
-            "id": "dbf07177c6cdcbbb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "f50f8eba7e19beae",
+            "id": "4b55e8c739be2b15",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "E-book/信息论与编码 第4版 (陈运 陈新 陈伟建) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-                "page": 81,
-                "left": -6,
-                "top": 150,
-                "zoom": 2.473505022477946
+                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
+                "page": 9,
+                "left": -25,
+                "top": 541,
+                "zoom": 0.60078125
               },
               "icon": "lucide-file-text",
-              "title": "信息论与编码 第4版 (陈运 陈新 陈伟建) (z-library.sk, 1lib.sk, z-lib.sk)"
+              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026"
+            }
+          },
+          {
+            "id": "ff8a570d5b50c4cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "会议大纲.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "会议大纲"
             }
           }
         ]
@@ -90,7 +90,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -120,13 +121,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "systemKnowledge/大创/思维导图.canvas",
+                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "思维导图 的大纲"
+              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026 的大纲"
             }
           },
           {
@@ -135,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "suddenThinking/数据库作业.md",
+                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +146,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "数据库作业 的反向链接列表"
+              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026 的反向链接列表"
             }
           },
           {
@@ -154,12 +155,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题2.md",
+                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "第三章 作业题2 的出链列表"
+              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026 的出链列表"
             }
           },
           {
@@ -216,7 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 461
+    "width": 273
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -239,49 +240,49 @@
   },
   "active": "aca8623bd1eeec13",
   "lastOpenFiles": [
-    "copilot/memory/Recent Conversations.md",
+    "会议大纲.md",
+    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
+    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(三)-2026.pdf",
+    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(二）-2026.pdf",
+    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/d0b1f67d2afaa8968c6cf9db50cfa4f4.par.temp",
+    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/6ad91b9367a6708ac84d9ca81d5ba8a3.par.temp",
+    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "suddenThinking/随手记录.md",
-    "E-book/信息论与编码 第4版 (陈运 陈新 陈伟建) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-    "copilot/copilot-conversations/信息论行可排列@20260424_170734.md",
-    "systemKnowledge/信息论/第四章 离散信道容量.md",
+    "OldFile/大二/大二（下）/计算机系统基础/实验/计算机系统基础实验报告_U2024_____姓名_202605.docx",
+    "OldFile/大二/大二（下）/计算机系统基础/实验/44da15cc0c9fe0ec8b4a21336a53df35.par.temp",
+    "OldFile/大二/大二（下）/计算机系统基础/实验/~$链接实验_操作指导.pptx",
+    "OldFile/大二/大二（下）/计算机系统基础/实验/~$实验任务_实验报告_202604.docx",
+    "OldFile/大二/大二（下）/计算机系统基础/实验/computerSystemBasicExp/exp5/requirement.md",
+    "suddenThinking/在干什么.md",
+    "systemKnowledge/逻辑与计算机系统设计/第六章 同步时序逻辑电路.md",
+    "systemKnowledge/信息论/第三章 无失真离散信源编码.md",
+    "systemKnowledge/信息论/第二章 离散信源熵.md",
+    "systemKnowledge/信息论/第二章 离散信源熵.canvas",
     "systemKnowledge/信息论/第五章 纠错编码.md",
+    "systemKnowledge/信息论/第四章 离散信道容量.md",
+    "suddenThinking/未命名.md",
+    "index.md",
+    "copilot/memory/Recent Conversations.md",
+    "copilot/copilot-conversations/信息论行可排列@20260424_170734.md",
     "systemKnowledge/obsidian插件.md",
     "systemKnowledge/计算机系统基础/cat命令.md",
     "OldFile/大二/大二（下）/计算机系统基础/实验/computerSystemBasicExp/exp4/Pragh1.md",
     "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
     "systemKnowledge/计算机系统基础/编译开关.md",
-    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "Books/数据库系统概论.md",
     "copilot/copilot-conversations/问候交流@20260414_115013.md",
     "copilot/copilot-conversations/文件内容总结@20260414_200747.md",
     "copilot/copilot-conversations/笔记文件夹总结@20260414_113834.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(一）-2026.pdf",
-    "OldFile/大二/大二（下）/信息论/课件/第5章 纠错编码.pdf",
-    "OldFile/大二/大二（下）/信息论/课件/第5章 纠错编码(1).pdf",
-    "index.md",
     "ToDoList/java知识点粗读.md",
-    "E-book/Computer_Systems__A_Programmer_Perspective_3rd_.pdf ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "Books/CSAPP.md",
     "suddenThinking/数据库作业.md",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/bomb/skip_endbr64.c",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础 第五章 运算方法与运算器(三)- 乘法与除法运算-2026.pdf",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第五章 运算方法与运算器(二)-浮点数加法运算-2026.pdf",
     "images/Pasted image 20260417222726.png",
     "images/e28b4c4cef1aad8d3bcb121643655a16.jpg",
-    "suddenThinking/未命名.md",
     "我的学习 - 学唐online.md",
-    "登录-学唐online.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题2.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题2.pdf",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第三章 作业题3.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第四章 作业题3.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/作业/第四章 作业题1.md",
-    "systemKnowledge/原子知识点/数据表示.md",
     "images/Pasted image 20260414093718.png",
     "Pasted image 20260414093718.png",
     "Pasted image 20260410163701.png",
     "systemKnowledge/大创/思维导图.canvas",
-    "systemKnowledge/信息论/第二章 离散信源熵.canvas",
     "images/JAVA入门到精通.png",
     "images/屏幕截图 2026-03-30 214359.png",
     "images/CSAPP.png",

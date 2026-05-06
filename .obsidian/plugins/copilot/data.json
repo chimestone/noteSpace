@@ -97,6 +97,17 @@
       ]
     },
     {
+      "name": "Deepseek-v4",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "",
+      "apiKey": "sk-70115493cbf241a48df8f3da184810a1",
+      "isEmbeddingModel": false,
+      "capabilities": [],
+      "stream": true
+    },
+    {
       "name": "moonshot-v1-8k",
       "provider": "3rd party (openai-format)",
       "enabled": true,
