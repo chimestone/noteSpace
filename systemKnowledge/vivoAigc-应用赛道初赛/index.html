@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智学导图 — 初中数学 · AI引导式学习助手</title>
+<style>
+/* ============================================================
+   CSS Reset & Variables
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue-50:  #F2F7FC;
+  --blue-100: #E3F0FA;
+  --blue-200: #C5DFF5;
+  --blue-300: #9CCAEB;
+  --blue-400: #6DB3E0;
+  --blue-500: #4A9BD9;
+  --blue-600: #3A7FBF;
+  --blue-700: #2E65A0;
+  --blue-800: #255285;
+  --blue-900: #1C3D63;
+  --bg-root:    #F0F4F8;
+  --bg-panel:   #FAFBFC;
+  --bg-surface: #FFFFFF;
+  --text:       #1E293B;
+  --text-sec:   #64748B;
+  --text-hint:  #94A3B8;
+  --border:     #E2E8F0;
+  --border-light: #F1F5F9;
+  --shadow-sm:  0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:  0 4px 12px rgba(0,0,0,.06);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --green:  #22C55E;
+  --yellow: #F59E0B;
+  --gray:   #CBD5E1;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+html, body { height: 100%; overflow: hidden; font-family: var(--font); color: var(--text); background: var(--bg-root); font-size: 14px; line-height: 1.5; }
+
+/* ============================================================
+   App Shell
+   ============================================================ */
+#app { display: flex; height: 100vh; width: 100vw; }
+
+/* Activity Bar */
+#activity-bar {
+  width: 48px; min-width: 48px; background: var(--blue-800);
+  display: flex; flex-direction: column; align-items: center;
+  padding-top: 12px; gap: 4px; z-index: 10;
+}
+.act-item {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--transition); color: rgba(255,255,255,.55);
+  position: relative; font-size: 18px;
+}
+.act-item:hover { color: #fff; background: rgba(255,255,255,.08); }
+.act-item.active { color: #fff; background: rgba(255,255,255,.15); }
+.act-item.active::before {
+  content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 20px; border-radius: 0 3px 3px 0; background: var(--blue-300);
+}
+.act-spacer { flex: 1; }
+.act-brand { font-size: 22px; color: #fff; margin-bottom: 8px; font-weight: 700; letter-spacing: -1px; cursor: default; }
+
+/* Left Sidebar */
+#left-panel {
+  width: 300px; min-width: 220px; background: var(--bg-panel);
+  border-right: 1px solid var(--border); display: flex; flex-direction: column;
+  z-index: 5; transition: width var(--transition);
+}
+#left-panel.collapsed { width: 0; min-width: 0; overflow: hidden; border-right: none; }
+
+.panel-header {
+  padding: 12px 16px; font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--text-sec); display: flex;
+  align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-light);
+  min-height: 44px;
+}
+
+/* Search */
+.search-wrap { padding: 10px 12px; }
+.search-box {
+  display: flex; align-items: center; gap: 8px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 7px 12px; transition: var(--transition);
+}
+.search-box:focus-within { border-color: var(--blue-400); box-shadow: 0 0 0 3px rgba(74,155,217,.12); }
+.search-box input {
+  flex: 1; border: none; outline: none; font-size: 13px; background: transparent;
+  color: var(--text); font-family: var(--font);
+}
+.search-box input::placeholder { color: var(--text-hint); }
+.search-icon { color: var(--text-hint); font-size: 14px; }
+
+/* Sort toolbar */
+.sort-wrap {
+  display: flex; align-items: center; gap: 6px; padding: 0 12px 10px;
+}
+.sort-btn {
+  font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border);
+  background: var(--bg-surface); cursor: pointer; color: var(--text-sec);
+  transition: var(--transition); white-space: nowrap; font-family: var(--font);
+}
+.sort-btn:hover { border-color: var(--blue-300); color: var(--blue-600); }
+.sort-btn.active { background: var(--blue-100); border-color: var(--blue-400); color: var(--blue-700); font-weight: 500; }
+
+/* Tree */
+.tree-wrap { flex: 1; overflow-y: auto; padding: 4px 8px; }
+.tree-wrap::-webkit-scrollbar { width: 4px; }
+.tree-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.tree-node { user-select: none; }
+.tree-row {
+  display: flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: var(--transition); font-size: 13px; position: relative;
+}
+.tree-row:hover { background: var(--blue-50); }
+.tree-row.selected { background: var(--blue-100); color: var(--blue-700); font-weight: 500; }
+.tree-arrow { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--text-hint); transition: transform .15s; flex-shrink: 0; }
+.tree-arrow.expanded { transform: rotate(90deg); }
+.tree-icon { font-size: 14px; flex-shrink: 0; width: 18px; text-align: center; }
+.tree-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tree-badge {
+  font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500;
+  white-space: nowrap; flex-shrink: 0;
+}
+.badge-mastered { background: #DCFCE7; color: #15803D; }
+.badge-weak { background: #FEF3C7; color: #B45309; }
+.badge-unlearned { background: #F1F5F9; color: #64748B; }
+
+.tree-children { overflow: hidden; transition: max-height .25s ease; }
+.tree-children.collapsed { max-height: 0 !important; }
+
+/* Middle Panel */
+#mid-panel {
+  flex: 1; display: flex; flex-direction: column; background: var(--bg-root);
+  min-width: 300px; overflow: hidden;
+}
+
+/* Tabs */
+.tab-bar {
+  display: flex; background: var(--bg-panel); border-bottom: 1px solid var(--border);
+  padding: 0 8px; gap: 2px; min-height: 40px; align-items: flex-end;
+}
+.tab-item {
+  padding: 8px 16px; font-size: 12px; cursor: pointer; border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  color: var(--text-sec); transition: var(--transition); white-space: nowrap;
+  border: 1px solid transparent; border-bottom: none; margin-bottom: -1px;
+}
+.tab-item:hover { color: var(--text); background: var(--blue-50); }
+.tab-item.active { color: var(--blue-700); background: var(--bg-root); border-color: var(--border); font-weight: 500; }
+
+/* Mid content area */
+.mid-content {
+  flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 20px;
+}
+.mid-content::-webkit-scrollbar { width: 5px; }
+.mid-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* Cards */
+.card {
+  background: var(--bg-surface); border-radius: var(--radius-lg);
+  border: 1px solid var(--border); padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.card-title {
+  font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.card-title .dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot-mastered { background: var(--green); }
+.dot-weak { background: var(--yellow); }
+.dot-unlearned { background: var(--gray); }
+
+/* Knowledge chain */
+.chain-list { display: flex; flex-direction: column; gap: 0; }
+.chain-item {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+  border-left: 3px solid transparent; transition: var(--transition);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.chain-item:hover { background: var(--blue-50); }
+.chain-item.current { border-left-color: var(--blue-500); background: var(--blue-50); font-weight: 500; }
+.chain-item .chain-num {
+  width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0;
+  background: var(--blue-100); color: var(--blue-700);
+}
+.chain-item.current .chain-num { background: var(--blue-500); color: #fff; }
+.chain-info { flex: 1; }
+.chain-name { font-size: 14px; font-weight: 500; }
+.chain-meta { font-size: 12px; color: var(--text-sec); }
+.chain-status { font-size: 12px; }
+
+/* Knowledge graph canvas area */
+.graph-container {
+  background: var(--bg-surface); border-radius: var(--radius-lg);
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  position: relative; overflow: hidden; min-height: 400px;
+}
+.graph-container svg { width: 100%; height: 100%; }
+
+/* Right Panel */
+#right-panel {
+  width: 370px; min-width: 300px; background: var(--bg-panel);
+  border-left: 1px solid var(--border); display: flex; flex-direction: column;
+  z-index: 5; transition: width var(--transition);
+}
+#right-panel.collapsed { width: 0; min-width: 0; overflow: hidden; border-left: none; }
+
+.chat-header {
+  padding: 12px 16px; border-bottom: 1px solid var(--border-light);
+  display: flex; align-items: center; gap: 10px; min-height: 44px;
+}
+.chat-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-400), var(--blue-600));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: #fff; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(74,155,217,.3);
+}
+.chat-avatar-text { font-size: 12px; font-weight: 700; }
+.chat-title { font-weight: 600; font-size: 14px; }
+.chat-subtitle { font-size: 11px; color: var(--text-sec); }
+
+.chat-messages {
+  flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 14px;
+}
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.chat-msg {
+  display: flex; gap: 10px; max-width: 92%; animation: msgIn .3s ease;
+}
+@keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.chat-msg.user { align-self: flex-end; flex-direction: row-reverse; }
+.chat-msg .msg-avatar {
+  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+}
+.chat-msg.ai .msg-avatar { background: linear-gradient(135deg, var(--blue-400), var(--blue-600)); color: #fff; }
+.chat-msg.user .msg-avatar { background: var(--blue-100); color: var(--blue-700); }
+.msg-bubble {
+  padding: 10px 14px; border-radius: var(--radius-md); font-size: 13px; line-height: 1.6;
+}
+.chat-msg.ai .msg-bubble { background: var(--bg-surface); border: 1px solid var(--border-light); color: var(--text); }
+.chat-msg.user .msg-bubble { background: var(--blue-500); color: #fff; }
+.msg-role { font-size: 11px; color: var(--text-hint); margin-bottom: 2px; }
+.msg-step {
+  display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px;
+  background: var(--blue-100); color: var(--blue-700); margin-bottom: 4px;
+}
+
+.chat-input-wrap {
+  padding: 12px 16px; border-top: 1px solid var(--border-light);
+}
+.chat-input-box {
+  display: flex; gap: 8px; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 8px 12px; transition: var(--transition);
+}
+.chat-input-box:focus-within { border-color: var(--blue-400); }
+.chat-input-box input {
+  flex: 1; border: none; outline: none; font-size: 13px; background: transparent;
+  color: var(--text); font-family: var(--font);
+}
+.chat-input-box input::placeholder { color: var(--text-hint); }
+.chat-send-btn {
+  width: 32px; height: 32px; border-radius: 50%; border: none;
+  background: var(--blue-500); color: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition); font-size: 14px; flex-shrink: 0;
+}
+.chat-send-btn:hover { background: var(--blue-600); }
+
+/* Welcome / Empty state */
+.empty-state {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; color: var(--text-hint); gap: 12px; text-align: center; padding: 40px;
+}
+.empty-state .empty-icon { font-size: 48px; opacity: .6; }
+.empty-state .empty-title { font-size: 16px; font-weight: 600; color: var(--text-sec); }
+.empty-state .empty-desc { font-size: 13px; max-width: 280px; line-height: 1.6; }
+
+/* Progress bar */
+.progress-bar {
+  height: 6px; border-radius: 3px; background: var(--border-light); overflow: hidden;
+}
+.progress-fill {
+  height: 100%; border-radius: 3px; transition: width .4s ease;
+  background: linear-gradient(90deg, var(--blue-400), var(--blue-500));
+}
+
+/* Stats row */
+.stats-row { display: flex; gap: 16px; }
+.stat-card {
+  flex: 1; background: var(--bg-surface); border-radius: var(--radius-md);
+  border: 1px solid var(--border); padding: 16px 20px; box-shadow: var(--shadow-sm);
+}
+.stat-value { font-size: 28px; font-weight: 700; color: var(--blue-600); }
+.stat-label { font-size: 12px; color: var(--text-sec); margin-top: 2px; }
+
+/* Toggle panel buttons */
+.panel-toggle {
+  width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border);
+  background: var(--bg-surface); cursor: pointer; display: flex; align-items: center;
+  justify-content: center; font-size: 12px; color: var(--text-sec); transition: var(--transition);
+}
+.panel-toggle:hover { background: var(--blue-50); color: var(--blue-600); }
+
+/* Responsive hint */
+.responsive-hint {
+  font-size: 11px; color: var(--text-hint);
+  text-align: center; padding: 4px;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Pulse animation for AI avatar */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(74,155,217,.3); }
+  50% { box-shadow: 0 2px 18px rgba(74,155,217,.5); }
+}
+.chat-avatar.pulse { animation: pulse 2s infinite; }
+
+/* View switcher content */
+.view { display: none; flex-direction: column; flex: 1; overflow: hidden; }
+.view.active { display: flex; }
+
+/* Graph overview styles */
+.graph-full { width: 100%; height: 100%; min-height: 450px; }
+
+/* Highlight animation */
+@keyframes highlightPulse {
+  0% { box-shadow: 0 0 0 0 rgba(74,155,217,.4); }
+  70% { box-shadow: 0 0 0 10px rgba(74,155,217,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,155,217,0); }
+}
+.highlight-node { animation: highlightPulse 1.5s ease infinite; }
+
+/* About page */
+.about-section { max-width: 600px; }
+.about-section h2 { font-size: 22px; font-weight: 700; color: var(--blue-800); margin-bottom: 8px; }
+.about-section h3 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; color: var(--text); }
+.about-section p { color: var(--text-sec); line-height: 1.7; margin-bottom: 8px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.tag {
+  padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500;
+  background: var(--blue-50); color: var(--blue-700); border: 1px solid var(--blue-200);
+}
+
+/* Feature grid on about page */
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.feature-item {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 16px;
+}
+.feature-item .fi-icon { font-size: 24px; margin-bottom: 8px; }
+.feature-item .fi-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.feature-item .fi-desc { font-size: 12px; color: var(--text-sec); line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div id="app">
+  <!-- ============================================================
+       Activity Bar (VSCode-style)
+       ============================================================ -->
+  <nav id="activity-bar">
+    <div class="act-brand">智</div>
+    <div class="act-item active" data-view="browse" title="知识浏览">📚</div>
+    <div class="act-item" data-view="chat" title="对话引导">💬</div>
+    <div class="act-item" data-view="graph" title="图谱总览">🗺️</div>
+    <div class="act-spacer"></div>
+    <div class="act-item" data-view="about" title="关于">ℹ️</div>
+  </nav>
+
+  <!-- ============================================================
+       Left Panel — 知识点导航
+       ============================================================ -->
+  <aside id="left-panel">
+    <div class="panel-header">
+      <span>📋 知识点导航</span>
+      <button class="panel-toggle" id="toggle-left" title="折叠">◀</button>
+    </div>
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="搜索知识点..." autocomplete="off">
+      </div>
+    </div>
+    <div class="sort-wrap" id="sort-bar">
+      <button class="sort-btn active" data-sort="default">📐 按年级</button>
+      <button class="sort-btn" data-sort="alpha">🔤 按名称</button>
+      <button class="sort-btn" data-sort="status">📊 按掌握度</button>
+    </div>
+    <div class="tree-wrap" id="tree-container">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="responsive-hint">共 <span id="kp-count">0</span> 个知识点</div>
+  </aside>
+
+  <!-- ============================================================
+       Middle Panel — 内容区
+       ============================================================ -->
+  <main id="mid-panel">
+    <!-- View: Browse Knowledge -->
+    <div class="view active" id="view-browse">
+      <div class="mid-content">
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-total">48</div>
+            <div class="stat-label">知识点总数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color:#22C55E;" id="stat-mastered">18</div>
+            <div class="stat-label">已掌握</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color:#F59E0B;" id="stat-weak">12</div>
+            <div class="stat-label">薄弱</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color:#94A3B8;" id="stat-unlearned">18</div>
+            <div class="stat-label">未学习</div>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:37.5%;" id="progress-bar"></div>
+        </div>
+
+        <div class="card" id="detail-card">
+          <div class="card-title">
+            <span>📖</span> 选择一个知识点查看详情
+          </div>
+          <div id="detail-content">
+            <p style="color:var(--text-hint);">点击左侧知识树中的任意知识点，查看其前置知识链与后继关系。</p>
+          </div>
+        </div>
+
+        <div class="card" id="chain-card" style="display:none;">
+          <div class="card-title">
+            <span>🔗</span> <span id="chain-title">前置知识链</span>
+          </div>
+          <div class="chain-list" id="chain-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View: Chat Demo -->
+    <div class="view" id="view-chat">
+      <div class="mid-content">
+        <div class="card">
+          <div class="card-title"><span>🎯</span> 引导式对话 · 典型案例</div>
+          <p style="color:var(--text-sec); font-size:13px; line-height:1.7;">
+            以下展示智学导图<strong>核心创新功能</strong>——断层追溯与修复。
+            初三学生小华遇到"求 y = 2x² - 8x + 5 顶点坐标"，AI不直接给答案，
+            而是沿知识链向下追问，找到断裂点后逐级引导，让学生<strong>自己推导出答案</strong>。
+          </p>
+          <p style="color:var(--text-hint); font-size:12px; margin-top:8px;">
+            💡 在右侧对话面板中体验完整的苏格拉底式引导对话。
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>🔄</span> 四步工作流</div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:120px; padding:16px; background:var(--blue-50); border-radius:var(--radius-md); text-align:center;">
+              <div style="font-size:24px;">🔍</div>
+              <div style="font-weight:600; font-size:13px; margin:6px 0;">Step 1</div>
+              <div style="font-size:11px; color:var(--text-sec);">断层检测<br>沿知识链向下追问</div>
+            </div>
+            <div style="font-size:20px; display:flex; align-items:center; color:var(--text-hint);">→</div>
+            <div style="flex:1; min-width:120px; padding:16px; background:var(--yellow); border-radius:var(--radius-md); text-align:center; --yellow:#FEF3C7;">
+              <div style="font-size:24px;">🎯</div>
+              <div style="font-weight:600; font-size:13px; margin:6px 0;">Step 2</div>
+              <div style="font-size:11px; color:var(--text-sec);">定位断裂点<br>首次错误处即断裂点</div>
+            </div>
+            <div style="font-size:20px; display:flex; align-items:center; color:var(--text-hint);">→</div>
+            <div style="flex:1; min-width:120px; padding:16px; background:var(--blue-50); border-radius:var(--radius-md); text-align:center;">
+              <div style="font-size:24px;">🩺</div>
+              <div style="font-weight:600; font-size:13px; margin:6px 0;">Step 3</div>
+              <div style="font-size:11px; color:var(--text-sec);">渐进引导<br>从断裂点逐级讲解</div>
+            </div>
+            <div style="font-size:20px; display:flex; align-items:center; color:var(--text-hint);">→</div>
+            <div style="flex:1; min-width:120px; padding:16px; background:var(--green); border-radius:var(--radius-md); text-align:center; --green:#DCFCE7;">
+              <div style="font-size:24px;">✅</div>
+              <div style="font-weight:600; font-size:13px; margin:6px 0;">Step 4</div>
+              <div style="font-size:11px; color:var(--text-sec);">自主推导<br>让学生自己得出答案</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>🚫</span> 核心原则</div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <div style="display:flex; align-items:center; gap:8px; font-size:13px;">❌ 不直接给答案</div>
+            <div style="display:flex; align-items:center; gap:8px; font-size:13px;">❌ 不跳过任何一级知识</div>
+            <div style="display:flex; align-items:center; gap:8px; font-size:13px;">✅ 让学生自己说出答案</div>
+            <div style="display:flex; align-items:center; gap:8px; font-size:13px;">✅ 每次对话都是一次系统性修复</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View: Full Graph -->
+    <div class="view" id="view-graph">
+      <div class="mid-content" style="padding:16px; height:100%;">
+        <div class="graph-container" style="flex:1;" id="full-graph-container">
+          <!-- SVG rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- View: About -->
+    <div class="view" id="view-about">
+      <div class="mid-content about-section">
+        <h2>智学导图</h2>
+        <p style="font-size:14px; color:var(--blue-600); font-weight:500;">初中数学 · AI引导式学习助手</p>
+        <p>做初中生数学学习的<strong>"导航员"</strong>与<strong>"断层修复师"</strong>——不只告诉学生答案是什么，而是帮他找到"从哪里开始不会了"，然后带着他一步步自己推出来。</p>
+
+        <h3>三大核心功能</h3>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="fi-icon">🔍</div>
+            <div class="fi-title">知识点雷达</div>
+            <div class="fi-desc">精准识别问题背后的知识结构，列出完整前置知识链，将每次提问转化为诊断机会。</div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-icon">🩺</div>
+            <div class="fi-title">断层追溯与修复 ⭐</div>
+            <div class="fi-desc">像经验丰富的家教老师一样，沿知识链向下追溯，找到真正的断裂点并逐级修复。</div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-icon">🗺️</div>
+            <div class="fi-title">知识图谱可视化</div>
+            <div class="fi-desc">以知识树形式展示200+核心知识点的层级结构，三色标注掌握状态。</div>
+          </div>
+          <div class="feature-item">
+            <div class="fi-icon">💬</div>
+            <div class="fi-title">苏格拉底式引导</div>
+            <div class="fi-desc">不直接给答案，以提问和子问题引导学生自主推导，真正的学习发生在思考过程中。</div>
+          </div>
+        </div>
+
+        <h3>核心理念</h3>
+        <p style="font-size:15px; font-style:italic; color:var(--blue-700);">"引导而非告知，修复而非跳过"</p>
+
+        <h3>技术标签</h3>
+        <div class="tag-list">
+          <span class="tag">BlueLM 大模型</span>
+          <span class="tag">知识图谱</span>
+          <span class="tag">快应用</span>
+          <span class="tag">AI智能体</span>
+          <span class="tag">苏格拉底式教学</span>
+          <span class="tag">初中数学</span>
+          <span class="tag">AIGC高校竞赛</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       Right Panel — AI 对话区 (蓝心小v)
+       ============================================================ -->
+  <aside id="right-panel">
+    <div class="chat-header">
+      <div class="chat-avatar pulse" id="chat-avatar">🧠</div>
+      <div>
+        <div class="chat-title">蓝心小v</div>
+        <div class="chat-subtitle">AI引导式学习助手 · BlueLM</div>
+      </div>
+      <div style="flex:1;"></div>
+      <button class="panel-toggle" id="toggle-right" title="折叠">▶</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <!-- Pre-loaded demo conversation -->
+    </div>
+    <div class="chat-input-wrap">
+      <div class="chat-input-box">
+        <input type="text" id="chat-input" placeholder="输入你的数学问题..." autocomplete="off">
+        <button class="chat-send-btn" id="chat-send">↑</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script>
+/* ============================================================
+   Knowledge Data — 初中数学知识体系
+   (from 智学导图_参赛PPT大纲.md)
+   ============================================================ */
+const knowledgeTree = [
+  {
+    id: 'g7a', name: '初一上', icon: '📗',
+    children: [
+      {
+        id: 'm7a1', name: '有理数', icon: '🔢',
+        children: [
+          { id: 'kp001', name: '正数与负数', status: 'mastered', deps: [] },
+          { id: 'kp002', name: '数轴与相反数', status: 'mastered', deps: ['kp001'] },
+          { id: 'kp003', name: '绝对值', status: 'weak', deps: ['kp002'] },
+          { id: 'kp004', name: '有理数加减法', status: 'mastered', deps: ['kp001'] },
+          { id: 'kp005', name: '有理数乘除法', status: 'weak', deps: ['kp004'] },
+          { id: 'kp006', name: '有理数乘方', status: 'unlearned', deps: ['kp005'] },
+        ]
+      },
+      {
+        id: 'm7a2', name: '整式的加减', icon: '📝',
+        children: [
+          { id: 'kp007', name: '用字母表示数', status: 'mastered', deps: [] },
+          { id: 'kp008', name: '单项式与多项式', status: 'mastered', deps: ['kp007'] },
+          { id: 'kp009', name: '合并同类项', status: 'mastered', deps: ['kp008'] },
+          { id: 'kp010', name: '去括号法则', status: 'weak', deps: ['kp009'] },
+        ]
+      },
+      {
+        id: 'm7a3', name: '一元一次方程', icon: '⚖️',
+        children: [
+          { id: 'kp011', name: '等式的基本性质', status: 'mastered', deps: [] },
+          { id: 'kp012', name: '一元一次方程解法', status: 'weak', deps: ['kp011', 'kp010'] },
+          { id: 'kp013', name: '应用题列方程', status: 'unlearned', deps: ['kp012'] },
+        ]
+      }
+    ]
+  },
+  {
+    id: 'g7b', name: '初一下', icon: '📘',
+    children: [
+      {
+        id: 'm7b1', name: '相交线与平行线', icon: '📏',
+        children: [
+          { id: 'kp014', name: '对顶角与邻补角', status: 'mastered', deps: [] },
+          { id: 'kp015', name: '平行线的判定', status: 'weak', deps: ['kp014'] },
+          { id: 'kp016', name: '平行线的性质', status: 'unlearned', deps: ['kp015'] },
+        ]
+      },
+      {
+        id: 'm7b2', name: '实数', icon: '🔢',
+        children: [
+          { id: 'kp017', name: '平方根', status: 'mastered', deps: ['kp006'] },
+          { id: 'kp018', name: '立方根', status: 'unlearned', deps: ['kp017'] },
+          { id: 'kp019', name: '无理数与实数', status: 'unlearned', deps: ['kp017'] },
+        ]
+      },
+      {
+        id: 'm7b3', name: '二元一次方程组', icon: '⚖️',
+        children: [
+          { id: 'kp020', name: '二元一次方程概念', status: 'mastered', deps: ['kp012'] },
+          { id: 'kp021', name: '代入消元法', status: 'weak', deps: ['kp020'] },
+          { id: 'kp022', name: '加减消元法', status: 'weak', deps: ['kp020'] },
+          { id: 'kp023', name: '方程组应用题', status: 'unlearned', deps: ['kp021', 'kp022'] },
+        ]
+      },
+      {
+        id: 'm7b4', name: '不等式', icon: '📐',
+        children: [
+          { id: 'kp024', name: '不等式的性质', status: 'unlearned', deps: ['kp011'] },
+          { id: 'kp025', name: '一元一次不等式', status: 'unlearned', deps: ['kp024', 'kp012'] },
+        ]
+      }
+    ]
+  },
+  {
+    id: 'g8a', name: '初二上', icon: '📙',
+    children: [
+      {
+        id: 'm8a1', name: '三角形', icon: '🔺',
+        children: [
+          { id: 'kp026', name: '三角形三边关系', status: 'mastered', deps: [] },
+          { id: 'kp027', name: '三角形内角和', status: 'mastered', deps: ['kp026'] },
+          { id: 'kp028', name: '三角形的外角', status: 'weak', deps: ['kp027'] },
+        ]
+      },
+      {
+        id: 'm8a2', name: '全等三角形', icon: '🔺',
+        children: [
+          { id: 'kp029', name: '全等三角形概念', status: 'mastered', deps: ['kp026'] },
+          { id: 'kp030', name: 'SSS/SAS/ASA判定', status: 'weak', deps: ['kp029'] },
+          { id: 'kp031', name: '全等证明综合', status: 'unlearned', deps: ['kp030'] },
+        ]
+      },
+      {
+        id: 'm8a3', name: '整式乘法与因式分解', icon: '📝',
+        children: [
+          { id: 'kp032', name: '同底数幂乘法', status: 'mastered', deps: ['kp006'] },
+          { id: 'kp033', name: '乘法分配律', status: 'mastered', deps: [] },
+          { id: 'kp034', name: '完全平方公式', status: 'weak', deps: ['kp033'] },
+          { id: 'kp035', name: '提取公因式', status: 'weak', deps: ['kp033'] },
+          { id: 'kp036', name: '公式法因式分解', status: 'unlearned', deps: ['kp034'] },
+        ]
+      },
+      {
+        id: 'm8a4', name: '分式', icon: '➗',
+        children: [
+          { id: 'kp037', name: '分式基本性质', status: 'unlearned', deps: ['kp005'] },
+          { id: 'kp038', name: '分式加减法', status: 'unlearned', deps: ['kp037'] },
+          { id: 'kp039', name: '分式方程', status: 'unlearned', deps: ['kp038', 'kp012'] },
+        ]
+      }
+    ]
+  },
+  {
+    id: 'g8b', name: '初二下', icon: '📒',
+    children: [
+      {
+        id: 'm8b1', name: '二次根式', icon: '√',
+        children: [
+          { id: 'kp040', name: '二次根式概念', status: 'unlearned', deps: ['kp017'] },
+          { id: 'kp041', name: '二次根式运算', status: 'unlearned', deps: ['kp040'] },
+        ]
+      },
+      {
+        id: 'm8b2', name: '勾股定理', icon: '📐',
+        children: [
+          { id: 'kp042', name: '勾股定理及其证明', status: 'weak', deps: ['kp026'] },
+          { id: 'kp043', name: '勾股定理逆定理', status: 'unlearned', deps: ['kp042'] },
+          { id: 'kp044', name: '勾股定理应用', status: 'unlearned', deps: ['kp042'] },
+        ]
+      },
+      {
+        id: 'm8b3', name: '一次函数', icon: '📈',
+        children: [
+          { id: 'kp045', name: '变量与函数概念', status: 'unlearned', deps: ['kp007'] },
+          { id: 'kp046', name: '一次函数图像', status: 'unlearned', deps: ['kp045', 'kp012'] },
+        ]
+      }
+    ]
+  },
+  {
+    id: 'g9a', name: '初三上', icon: '📕',
+    children: [
+      {
+        id: 'm9a1', name: '一元二次方程', icon: '⚖️',
+        children: [
+          { id: 'kp047', name: '一元二次方程概念', status: 'weak', deps: ['kp012', 'kp032'] },
+          { id: 'kp048', name: '配方法', status: 'weak', deps: ['kp034', 'kp035', 'kp047'] },
+          { id: 'kp049', name: '公式法解方程', status: 'unlearned', deps: ['kp047', 'kp048'] },
+        ]
+      },
+      {
+        id: 'm9a2', name: '二次函数', icon: '📈',
+        children: [
+          { id: 'kp050', name: '二次函数定义与图像', status: 'unlearned', deps: ['kp046', 'kp047'] },
+          { id: 'kp051', name: '顶点坐标与对称轴', status: 'unlearned', deps: ['kp048', 'kp050'] },
+          { id: 'kp052', name: '二次函数综合应用', status: 'unlearned', deps: ['kp051'] },
+        ]
+      },
+      {
+        id: 'm9a3', name: '圆', icon: '⭕',
+        children: [
+          { id: 'kp053', name: '圆的基本性质', status: 'unlearned', deps: [] },
+          { id: 'kp054', name: '圆周角定理', status: 'unlearned', deps: ['kp053'] },
+        ]
+      }
+    ]
+  },
+  {
+    id: 'g9b', name: '初三下', icon: '📓',
+    children: [
+      {
+        id: 'm9b1', name: '相似三角形', icon: '🔺',
+        children: [
+          { id: 'kp055', name: '相似三角形判定', status: 'unlearned', deps: ['kp029'] },
+          { id: 'kp056', name: '相似三角形应用', status: 'unlearned', deps: ['kp055'] },
+        ]
+      },
+      {
+        id: 'm9b2', name: '锐角三角函数', icon: '📐',
+        children: [
+          { id: 'kp057', name: '正弦余弦正切', status: 'unlearned', deps: ['kp026'] },
+          { id: 'kp058', name: '三角函数计算', status: 'unlearned', deps: ['kp057', 'kp042'] },
+        ]
+      }
+    ]
+  }
+];
+
+// Flatten for search
+function flattenTree(tree) {
+  const result = [];
+  function walk(nodes, level, parentId) {
+    nodes.forEach(n => {
+      const entry = { ...n, level, parentId };
+      result.push(entry);
+      if (n.children) walk(n.children, level + 1, n.id);
+    });
+  }
+  walk(tree, 0, null);
+  return result;
+}
+
+const flatNodes = flattenTree(knowledgeTree);
+const knowledgePoints = flatNodes.filter(n => n.status !== undefined);
+const nodeMap = {};
+flatNodes.forEach(n => { nodeMap[n.id] = n; });
+
+// Update KP count
+document.getElementById('kp-count').textContent = knowledgePoints.length;
+
+// Stats
+const mastered = knowledgePoints.filter(k => k.status === 'mastered').length;
+const weak = knowledgePoints.filter(k => k.status === 'weak').length;
+const unlearned = knowledgePoints.filter(k => k.status === 'unlearned').length;
+document.getElementById('stat-total').textContent = knowledgePoints.length;
+document.getElementById('stat-mastered').textContent = mastered;
+document.getElementById('stat-weak').textContent = weak;
+document.getElementById('stat-unlearned').textContent = unlearned;
+document.getElementById('progress-bar').style.width =
+  Math.round((mastered / knowledgePoints.length) * 100) + '%';
+
+/* ============================================================
+   Tree Rendering
+   ============================================================ */
+const treeContainer = document.getElementById('tree-container');
+let activeSort = 'default';
+let searchQuery = '';
+let selectedKpId = null;
+let expandedNodes = new Set(knowledgeTree.map(g => g.id)); // grades expanded by default
+
+function getStatusBadge(status) {
+  const map = {
+    mastered: '<span class="tree-badge badge-mastered">已掌握</span>',
+    weak: '<span class="tree-badge badge-weak">薄弱</span>',
+    unlearned: '<span class="tree-badge badge-unlearned">未学习</span>',
+  };
+  return map[status] || '';
+}
+
+function getStatusIcon(status) {
+  const map = { mastered: '🟢', weak: '🟡', unlearned: '⚪' };
+  return map[status] || '';
+}
+
+function renderTree(nodes, level = 0) {
+  let html = '';
+  nodes.forEach(node => {
+    const hasChildren = node.children && node.children.length > 0;
+    const isExpanded = expandedNodes.has(node.id);
+    const isSelected = selectedKpId === node.id;
+    const isKp = node.status !== undefined;
+
+    // Filter by search
+    if (searchQuery && !matchSearch(node)) return;
+
+    html += `<div class="tree-node" data-id="${node.id}">`;
+    html += `<div class="tree-row ${isSelected ? 'selected' : ''}" data-id="${node.id}" style="padding-left:${8 + level * 18}px">`;
+
+    if (hasChildren) {
+      html += `<span class="tree-arrow ${isExpanded ? 'expanded' : ''}">▶</span>`;
+    } else {
+      html += `<span class="tree-arrow" style="visibility:hidden;">▶</span>`;
+    }
+
+    if (node.icon) {
+      html += `<span class="tree-icon">${node.icon}</span>`;
+    } else {
+      html += `<span class="tree-icon">${getStatusIcon(node.status)}</span>`;
+    }
+
+    html += `<span class="tree-label">${node.name}</span>`;
+
+    if (isKp) {
+      html += getStatusBadge(node.status);
+    } else if (hasChildren) {
+      html += `<span style="font-size:10px;color:var(--text-hint);">${node.children.length}</span>`;
+    }
+
+    html += `</div>`;
+
+    if (hasChildren) {
+      html += `<div class="tree-children ${isExpanded ? '' : 'collapsed'}">`;
+      if (isExpanded) {
+        html += renderTree(node.children, level + 1);
+      }
+      html += `</div>`;
+    }
+
+    html += `</div>`;
+  });
+  return html;
+}
+
+function matchSearch(node) {
+  if (!searchQuery) return true;
+  const q = searchQuery.toLowerCase();
+  if (node.name.toLowerCase().includes(q)) return true;
+  if (node.children) {
+    return node.children.some(c => matchSearch(c));
+  }
+  return false;
+}
+
+function refreshTree() {
+  let data = [...knowledgeTree];
+  if (activeSort === 'alpha') {
+    data = sortAlpha(JSON.parse(JSON.stringify(knowledgeTree)));
+  } else if (activeSort === 'status') {
+    data = sortByStatus(JSON.parse(JSON.stringify(knowledgeTree)));
+  }
+  treeContainer.innerHTML = renderTree(data);
+  bindTreeEvents();
+}
+
+function sortAlpha(nodes) {
+  nodes.sort((a, b) => a.name.localeCompare(b.name, 'zh'));
+  nodes.forEach(n => { if (n.children) sortAlpha(n.children); });
+  return nodes;
+}
+
+function sortByStatus(nodes) {
+  const order = { mastered: 0, weak: 1, unlearned: 2 };
+  nodes.forEach(n => {
+    if (n.children) sortByStatus(n.children);
+  });
+  nodes.sort((a, b) => {
+    if (a.status && b.status) return order[a.status] - order[b.status];
+    if (!a.status && !b.status) return 0;
+    return a.status ? 1 : -1; // folders first
+  });
+  return nodes;
+}
+
+function bindTreeEvents() {
+  treeContainer.querySelectorAll('.tree-row').forEach(row => {
+    row.addEventListener('click', (e) => {
+      const id = row.dataset.id;
+      const node = nodeMap[id];
+      if (!node) return;
+
+      // Toggle expand
+      if (node.children && node.children.length > 0) {
+        if (expandedNodes.has(id)) {
+          expandedNodes.delete(id);
+        } else {
+          expandedNodes.add(id);
+        }
+      }
+
+      // Select
+      selectedKpId = id;
+      refreshTree();
+
+      // Show detail if knowledge point
+      if (node.status !== undefined) {
+        showDetail(node);
+      }
+    });
+  });
+}
+
+/* ============================================================
+   Detail Panel (Middle)
+   ============================================================ */
+function showDetail(kp) {
+  const detailCard = document.getElementById('detail-card');
+  const chainCard = document.getElementById('chain-card');
+  const detailContent = document.getElementById('detail-content');
+
+  const statusText = { mastered: '已掌握 ✅', weak: '薄弱 ⚠️', unlearned: '未学习 ⚪' };
+
+  detailContent.innerHTML = `
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+      <div style="font-size:36px;">${getStatusIcon(kp.status)}</div>
+      <div>
+        <div style="font-size:18px;font-weight:700;">${kp.name}</div>
+        <div style="font-size:13px;color:var(--text-sec);">${statusText[kp.status]} | 所属模块: ${getModuleName(kp)}</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:var(--text-sec);line-height:1.6;">
+      ${kp.deps && kp.deps.length > 0
+        ? `前置依赖: ${kp.deps.map(d => nodeMap[d]?.name || d).join(' → ')}`
+        : '无前置依赖，为基础知识点。'}
+    </div>
+  `;
+
+  // Show dependency chain
+  if (kp.deps && kp.deps.length > 0) {
+    chainCard.style.display = '';
+    document.getElementById('chain-title').textContent = `🔗 ${kp.name} · 前置知识链`;
+    renderChain(kp);
+  } else {
+    chainCard.style.display = 'none';
+  }
+}
+
+function getModuleName(kp) {
+  if (kp.parentId && nodeMap[kp.parentId]) {
+    return nodeMap[kp.parentId].name;
+  }
+  return '—';
+}
+
+function renderChain(kp) {
+  const chainList = document.getElementById('chain-list');
+  // Collect all deps recursively
+  const allDeps = [];
+  const visited = new Set();
+  function collect(id) {
+    if (visited.has(id)) return;
+    visited.add(id);
+    const node = nodeMap[id];
+    if (!node) return;
+    if (node.deps) {
+      node.deps.forEach(d => collect(d));
+    }
+    if (node.status !== undefined) {
+      allDeps.push(node);
+    }
+  }
+  collect(kp.id);
+  // Ensure current KP is last
+  const others = allDeps.filter(n => n.id !== kp.id);
+  others.push(kp);
+
+  const uniqueDeps = [];
+  const seen = new Set();
+  others.forEach(n => {
+    if (!seen.has(n.id)) { seen.add(n.id); uniqueDeps.push(n); }
+  });
+
+  chainList.innerHTML = uniqueDeps.map((n, i) => {
+    const isCurrent = n.id === kp.id;
+    const num = i + 1;
+    return `
+      <div class="chain-item ${isCurrent ? 'current' : ''}">
+        <div class="chain-num">${num}</div>
+        <div class="chain-info">
+          <div class="chain-name">${n.name}</div>
+          <div class="chain-meta">${getModuleName(n)}</div>
+        </div>
+        <div class="chain-status">${getStatusBadge(n.status)}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ============================================================
+   Full Knowledge Graph (SVG)
+   ============================================================ */
+function renderFullGraph() {
+  const container = document.getElementById('full-graph-container');
+  const W = container.clientWidth || 800;
+  const H = container.clientHeight || 500;
+
+  // Build a hierarchical layout
+  const grades = knowledgeTree;
+  const gradeHeight = H / grades.length;
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
+  svg += `<defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.08"/></filter>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94A3B8"/>
+    </marker>
+  </defs>`;
+
+  const nodePositions = [];
+
+  grades.forEach((grade, gi) => {
+    const gy = gi * gradeHeight + 50;
+    svg += `<text x="20" y="${gy - 10}" font-size="13" font-weight="700" fill="#3A7FBF">${grade.name}</text>`;
+
+    const modules = grade.children;
+    const modWidth = (W - 60) / modules.length;
+
+    modules.forEach((mod, mi) => {
+      const mx = 40 + mi * modWidth;
+      const my = gy + 8;
+      svg += `<rect x="${mx}" y="${my}" width="${modWidth - 12}" height="24" rx="6"
+        fill="#E3F0FA" stroke="#9CCAEB" stroke-width="1" filter="url(#shadow)"/>
+        <text x="${mx + 8}" y="${my + 16}" font-size="12" font-weight="500" fill="#2E65A0">${mod.name}</text>`;
+
+      const kps = mod.children;
+      const kpStartY = my + 34;
+      kps.forEach((kp, ki) => {
+        const kx = mx + 4;
+        const ky = kpStartY + ki * 22;
+        const colors = { mastered: '#DCFCE7', weak: '#FEF3C7', unlearned: '#F1F5F9' };
+        const strokes = { mastered: '#86EFAC', weak: '#FCD34D', unlearned: '#CBD5E1' };
+        const texts = { mastered: '#15803D', weak: '#B45309', unlearned: '#64748B' };
+
+        nodePositions.push({ id: kp.id, x: kx + (modWidth - 12) / 2 - 40, y: ky + 7, cx: kx + (modWidth - 12) / 2, cy: ky + 7 });
+
+        svg += `<rect x="${kx}" y="${ky}" width="${modWidth - 20}" height="18" rx="4"
+          fill="${colors[kp.status]}" stroke="${strokes[kp.status]}" stroke-width="1"/>
+          <text x="${kx + 6}" y="${ky + 13}" font-size="10" fill="${texts[kp.status]}">${kp.name}</text>`;
+      });
+    });
+  });
+
+  // Draw dependency arrows
+  knowledgePoints.forEach(kp => {
+    if (kp.deps) {
+      kp.deps.forEach(depId => {
+        const from = nodePositions.find(n => n.id === depId);
+        const to = nodePositions.find(n => n.id === kp.id);
+        if (from && to) {
+          svg += `<line x1="${from.cx}" y1="${from.cy + 8}" x2="${to.cx}" y2="${to.cy - 8}"
+            stroke="#CBD5E1" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="4,2"/>`;
+        }
+      });
+    }
+  });
+
+  svg += '</svg>';
+  container.innerHTML = svg;
+}
+
+/* ============================================================
+   Chat System (Right Panel)
+   ============================================================ */
+const demoConversation = [
+  { role: 'user', text: '求顶点坐标：y = 2x² - 8x + 5，我不会做' },
+  { role: 'ai', text: '先不急着做这道题。配方法的第一步是处理二次项系数。2x² - 8x，把公因数2提出来，括号里剩下什么？', step: '检测"提取公因数"前置操作' },
+  { role: 'user', text: '2(x² - 4x) + 5' },
+  { role: 'ai', text: '✅ 正确！现在看括号里的 x² - 4x，要把它配成完全平方，需要加上一个什么数？提示：一次项系数是 -4', step: '检测"配完全平方"前置操作' },
+  { role: 'user', text: '嗯……加4？' },
+  { role: 'ai', text: '没错，x² - 4x + 4 = (x-2)²。但我们在括号里加了4，外面要相应减去多少？别忘了前面还有个系数2', step: '检测"恒等变形"理解' },
+  { role: 'user', text: '减8？因为2×4=8' },
+  { role: 'ai', text: '很好。整理一下：2[(x-2)² - 4] + 5 = 2(x-2)² - 8 + 5。继续化简，顶点坐标是？', step: '所有前置知识已确认，引导完成' },
+  { role: 'user', text: '2(x-2)² - 3，顶点是(2, -3)！我自己推出来了！' },
+  { role: 'ai', text: '🎉 完全正确，而且完全是你自己推出来的。回顾一下，你刚才用到了配方法的三个关键步骤：提取公因数 → 配完全平方 → 恒等变形整理。下次遇到类似题目，你完全可以独立完成了 👍', step: '知识链修复完成' },
+];
+
+let chatMessages = [...demoConversation];
+
+function renderChat() {
+  const container = document.getElementById('chat-messages');
+  container.innerHTML = chatMessages.map((msg, i) => `
+    <div class="chat-msg ${msg.role}">
+      <div class="msg-avatar">${msg.role === 'ai' ? '🧠' : '👤'}</div>
+      <div>
+        <div class="msg-role">${msg.role === 'ai' ? '蓝心小v' : '小华（学生）'} ${msg.step ? `<span class="msg-step">${msg.step}</span>` : ''}</div>
+        <div class="msg-bubble">${msg.text}</div>
+      </div>
+    </div>
+  `).join('');
+  container.scrollTop = container.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  chatMessages.push({ role: 'user', text });
+  input.value = '';
+  renderChat();
+
+  // Simulate AI response after a short delay
+  const avatar = document.getElementById('chat-avatar');
+  avatar.classList.add('pulse');
+
+  setTimeout(() => {
+    const responses = [
+      '让我先确认一下，这道题考察的核心知识点是什么？我们沿着知识链往下看看……',
+      '不错！那在这个基础上，你觉得下一步应该怎么处理呢？提示一下：还记得我们之前学过的______吗？',
+      '很好，你已经在正确的路上了。不过这里有个小细节需要注意——再想想这个步骤的依据是什么？',
+      '完全正确！你看，你自己完全能够推导出来。让我们总结一下刚才用到的关键步骤……',
+    ];
+    const reply = responses[Math.floor(Math.random() * responses.length)];
+    chatMessages.push({ role: 'ai', text: reply, step: '引导式追问' });
+    renderChat();
+    avatar.classList.remove('pulse');
+  }, 1200);
+}
+
+document.getElementById('chat-send').addEventListener('click', sendMessage);
+document.getElementById('chat-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') sendMessage();
+});
+
+/* ============================================================
+   View Switching
+   ============================================================ */
+function switchView(viewId) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.act-item').forEach(a => a.classList.remove('active'));
+
+  const view = document.getElementById('view-' + viewId);
+  if (view) view.classList.add('active');
+
+  const actItem = document.querySelector(`[data-view="${viewId}"]`);
+  if (actItem) actItem.classList.add('active');
+
+  if (viewId === 'graph') {
+    setTimeout(renderFullGraph, 100);
+  }
+}
+
+document.querySelectorAll('.act-item').forEach(item => {
+  item.addEventListener('click', () => {
+    switchView(item.dataset.view);
+  });
+});
+
+/* ============================================================
+   Search & Sort
+   ============================================================ */
+document.getElementById('search-input').addEventListener('input', (e) => {
+  searchQuery = e.target.value.trim();
+  if (searchQuery) {
+    // Auto-expand all when searching
+    flatNodes.forEach(n => { if (n.children) expandedNodes.add(n.id); });
+  }
+  refreshTree();
+});
+
+document.querySelectorAll('#sort-bar .sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#sort-bar .sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeSort = btn.dataset.sort;
+    refreshTree();
+  });
+});
+
+/* ============================================================
+   Panel Toggle
+   ============================================================ */
+document.getElementById('toggle-left').addEventListener('click', () => {
+  document.getElementById('left-panel').classList.toggle('collapsed');
+  const btn = document.getElementById('toggle-left');
+  btn.textContent = btn.textContent === '◀' ? '▶' : '◀';
+});
+document.getElementById('toggle-right').addEventListener('click', () => {
+  document.getElementById('right-panel').classList.toggle('collapsed');
+  const btn = document.getElementById('toggle-right');
+  btn.textContent = btn.textContent === '▶' ? '◀' : '▶';
+});
+
+/* ============================================================
+   Init
+   ============================================================ */
+function init() {
+  refreshTree();
+  renderChat();
+}
+
+init();
+
+// Handle window resize for graph
+window.addEventListener('resize', () => {
+  if (document.getElementById('view-graph').classList.contains('active')) {
+    renderFullGraph();
+  }
+});
+</script>
+</body>
+</html>

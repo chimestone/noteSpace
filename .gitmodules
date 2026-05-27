@@ -1,0 +1,12 @@
+[submodule "资料/AIGCProject"]
+	path = 资料/AIGCProject
+	url = https://github.com/chimestone/AIGCProject.git
+[submodule "资料/大创/CryptoFace"]
+	path = 资料/大创/CryptoFace
+	url = https://github.com/human-analysis/CryptoFace.git
+[submodule "资料/科研轮转/本科生实习/ss_cdc_res"]
+	path = 资料/科研轮转/本科生实习/ss_cdc_res
+	url = https://github.com/chimestone/ss_cdc_res.git
+[submodule "资料/计算机系统基础/实验/computerSystemBasicExp"]
+	path = 资料/计算机系统基础/实验/computerSystemBasicExp
+	url = https://github.com/chimestone/computerSystemBasic.git

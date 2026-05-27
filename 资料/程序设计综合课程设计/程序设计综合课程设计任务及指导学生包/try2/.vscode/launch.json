@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/HuaweiMoveData/Users/钟磬/Desktop/资料整理/大二/大二（上）/程序设计综合课程设计/程序设计综合课程设计任务及指导学生包/try1",
+      "program": "d:/HuaweiMoveData/Users/钟磬/Desktop/资料整理/大二/大二（上）/程序设计综合课程设计/程序设计综合课程设计任务及指导学生包/try1/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

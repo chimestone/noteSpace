@@ -1,3 +1,14 @@
 E-book/
 dailyRecord/
 OldFile/
+
+# Obsidian copilot 索引文件（自动生成，体积大）
+.obsidian/copilot-index-*.json
+
+# 压缩包
+*.rar
+*.zip
+
+# Visual Studio 缓存
+.vs/
+*.ipch

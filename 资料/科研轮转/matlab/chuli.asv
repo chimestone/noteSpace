@@ -1,0 +1,116 @@
+filename = "D:\HuaweiMoveData\Users\钟磬\Desktop\百团大战\2025学生社团招新活动（收集结果）.xlsx";
+
+data = readtable(filename);
+
+name = data(:,3);
+
+age = data(:,4);
+
+conTEL = data(:,5);
+
+conQQ = data(:,6);
+
+from = data(:,7);
+
+inten = data(:,8);
+
+Fd = sum(~ismissing(data(:,9)));
+
+FdPeople = ~ismissing(data(:,9));
+
+Sd1People = contains(string(data{:,10}), "8:00-9:00［中操］布场");
+
+Sd1 = sum(Sd1People);
+
+Sd2People = contains(string(data{:,10}), "9:00-10:30［中操］");
+
+Sd2 = sum(Sd2People);
+
+Sd3People = contains(string(data{:,10}), "10:30-12:00［中操］");
+
+Sd3 = sum(Sd3People);
+
+Sd4People = contains(string(data{:,10}), "14:30-16:30［中操］");
+
+Sd4 = sum(Sd4People);
+
+Sd5People = contains(string(data{:,10}), "16:30-18:00［中操］");
+
+Sd5 = sum(Sd5People);
+
+Sd6People = contains(string(data{:,10}), "18:00-19:30［中操］收场");
+
+Sd6 = sum(Sd6People);
+
+Sd7People = contains(string(data{:,10}), "20:30-22:30［西操］布场");
+
+Sd7 = sum(Sd7People);
+
+Td1People = contains(string(data{:,11}), "8:00-9:00［西操］布场");
+
+Td1 = sum(Td1People);
+
+Td2People = contains(string(data{:,11}), "9:00-10:30［西操］");
+
+Td2 = sum(Td2People);
+
+Td3People = contains(string(data{:,11}), "10:30-12:00［西操］");
+
+Td3 = sum(Td3People);
+
+Td4People = contains(string(data{:,11}), "14:30-16:30［西操］");
+
+Td4 = sum(Td4People);
+
+Td5People = contains(string(data{:,11}), "16:30-18:00［西操］");
+
+Td5 = sum(Td5People);
+
+Td6People = contains(string(data{:,11}), "18:00-19:30［西操］收场");
+
+Td6 = sum(Td6People);
+
+% 准备数据
+values = [Fd, Sd1, Sd2, Sd3, Sd4, Sd5, Sd6, Sd7, Td1, Td2, Td3, Td4, Td5, Td6];
+labels = {'Fd', 'Sd1', 'Sd2', 'Sd3', 'Sd4', 'Sd5', 'Sd6', 'Sd7', 'Td1', 'Td2', 'Td3', 'Td4', 'Td5', 'Td6'};
+
+% 画柱状图
+figure;
+bar(values);
+set(gca, 'XTickLabel', labels);
+xlabel('时段');
+ylabel('人数');
+title('各时段参与人数统计');
+xtickangle(45);
+FdName = name{FdPeople,1};
+Sd1Name = name{Sd1People,1};
+Sd2Name = name{Sd2People,1};
+Sd3Name = name{Sd3People,1};
+Sd4Name = name{Sd4People,1};
+Sd5Name = name{Sd5People,1};
+Sd6Name = name{Sd6People,1};
+Sd7Name = name{Sd7People,1};
+Td1Name = name{Td1People,1};
+Td2Name = name{Td2People,1};
+Td3Name = name{Td3People,1};
+Td4Name = name{Td4People,1};
+Td5Name = name{Td5People,1};
+Td6Name = name{Td6People,1};
+
+intenName = contains(string(data{:,8}), "是");
+ageName1 = contains(string(data{:,4}),"24级");
+ageName2 = contains(string(data{:,4}),"23级");
+ageName = ageName1 | ageName2;
+intenName = intenName & ageName;
+
+intence = name{intenName,1};
+
+zhongqing = contains(string(data{:,7}),"文艺拓展部");
+zhongqingName = ~ismissing(data(:,11));
+
+zhongqingIntenceName = name{(zhongqing & zhongqingName),1};
+
+chi = data(:,[3,5,6,7]);
+
+filename1 = PATH;
+

@@ -1,4 +1,0 @@
----
-progress: true
-deadline: 2026.2.23
----

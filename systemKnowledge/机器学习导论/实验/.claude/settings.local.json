@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python ../main.py 0)",
+      "Bash(python evaluate.py)",
+      "Bash(python main.py 0)"
+    ]
+  }
+}

@@ -97,14 +97,35 @@
       ]
     },
     {
-      "name": "Deepseek-v4",
+      "name": "deepseek-v4-pro",
       "provider": "openrouterai",
       "enabled": true,
       "isBuiltIn": false,
-      "baseUrl": "",
-      "apiKey": "sk-70115493cbf241a48df8f3da184810a1",
+      "baseUrl": "https://api.deepseek.com",
+      "apiKey": "sk-08d68b382d3548c2a4ad9ee762dfb065",
       "isEmbeddingModel": false,
-      "capabilities": [],
+      "capabilities": [
+        "reasoning",
+        "vision",
+        "websearch"
+      ],
+      "stream": true,
+      "maxTokens": 89900,
+      "temperature": 0.1
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.deepseek.com",
+      "apiKey": "sk-08d68b382d3548c2a4ad9ee762dfb065",
+      "isEmbeddingModel": false,
+      "capabilities": [
+        "reasoning",
+        "vision",
+        "websearch"
+      ],
       "stream": true
     },
     {
@@ -432,6 +453,18 @@
       "baseUrl": "https://api.siliconflow.com/v1"
     },
     {
+      "name": "deepseek-v4-flash",
+      "provider": "3rd party (openai-format)",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.deepseek.com",
+      "apiKey": "sk-08d68b382d3548c2a4ad9ee762dfb065",
+      "isEmbeddingModel": true,
+      "capabilities": [],
+      "enableCors": true,
+      "streamUsage": true
+    },
+    {
       "name": "BAAI/bge-m3",
       "provider": "openai",
       "enabled": true,
@@ -440,7 +473,7 @@
       "apiKey": "sk-tnvbdsddgfoschpqfvlxvpotrfcwxubdlgsblgozszhdesuq",
       "isEmbeddingModel": true,
       "capabilities": [],
-      "enableCors": true
+      "enableCors": false
     },
     {
       "name": "text-embedding-3-large",
@@ -485,7 +518,7 @@
   "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
   "inlineEditCommands": [],
   "projectList": [],
-  "lastDismissedVersion": null,
+  "lastDismissedVersion": "3.2.8",
   "passMarkdownImages": true,
   "enableAutonomousAgent": true,
   "enableCustomPromptTemplating": true,
@@ -528,5 +561,6 @@
   "userSystemPromptsFolder": "copilot/system-prompts",
   "defaultSystemPromptTitle": "",
   "autoCompactThreshold": 128000,
-  "convertedDocOutputFolder": ""
+  "convertedDocOutputFolder": "",
+  "miyoSearchAll": false
 }

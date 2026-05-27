@@ -1,0 +1,1 @@
+{"name":"Local: 2895","url":"d:\\资料整理\\大二\\大二（上）\\算法设计与分析\\实验\\搜索\\P2895 Meter Shower S\\2895.cpp","tests":[{"id":1766048264530,"input":"4\n0 0 2\n2 1 2\n1 1 2\n0 3 5\n","output":"5\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\资料整理\\大二\\大二（上）\\算法设计与分析\\实验\\搜索\\P2895 Meter Shower S\\2895.cpp","group":"local","local":true}

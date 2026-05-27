@@ -1,0 +1,76 @@
+/* dashboard — 首页卡片样式 */
+
+.dashboard .hero {
+  text-align: center;
+  padding: 40px 0 16px;
+}
+.dashboard .hero h1 {
+  font-size: 2.2em;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+}
+.dashboard .hero p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* 卡片网格 */
+.dashboard .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+.dashboard .card-grid ul {
+  display: contents;
+}
+.dashboard .card-grid li {
+  display: block;
+  padding: 20px 16px 16px;
+  border-radius: 12px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  transition: background 0.15s, transform 0.15s;
+  cursor: pointer;
+}
+.dashboard .card-grid li:hover {
+  background: var(--background-modifier-hover);
+  transform: translateY(-2px);
+}
+.dashboard .card-grid li h3 {
+  margin: 0 0 4px;
+  font-size: 1.05em;
+}
+.dashboard .card-grid li p:not(:last-child) {
+  margin: 0 0 4px;
+  color: var(--text-muted);
+  font-size: 0.85em;
+}
+.dashboard .card-grid li a {
+  font-size: 0.82em;
+  text-decoration: none;
+  color: var(--text-accent);
+}
+
+/* 快捷入口 */
+.dashboard .quick-links {
+  text-align: center;
+  padding: 24px 0 12px;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+.dashboard .quick-links h3 {
+  font-size: 0.85em;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+/* 移动端适配 */
+@media (max-width: 500px) {
+  .dashboard .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

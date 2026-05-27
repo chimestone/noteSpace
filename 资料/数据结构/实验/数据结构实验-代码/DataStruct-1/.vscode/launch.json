@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/钟磬/Desktop/电子教材/大一下/数据结构/数据结构实验/数据结构-代码/数据结构实验-代码/DataStruct-1",
+      "program": "c:/Users/钟磬/Desktop/电子教材/大一下/数据结构/数据结构实验/数据结构-代码/数据结构实验-代码/DataStruct-1/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

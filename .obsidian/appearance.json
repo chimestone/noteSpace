@@ -1,5 +1,8 @@
 {
   "accentColor": "",
-  "cssTheme": "Primary",
-  "theme": "moonstone"
+  "cssTheme": "PLN",
+  "enabledCssSnippets": [
+    "dashboard"
+  ],
+  "theme": "system"
 }

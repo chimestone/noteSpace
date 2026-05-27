@@ -8,6 +8,12 @@
     },
     {
       "type": "url",
+      "ctime": 1778037904745,
+      "url": "https://www.krio.com/",
+      "title": "krio.com"
+    },
+    {
+      "type": "url",
       "ctime": 1776091376017,
       "url": "https://github.com/",
       "title": "GitHub"
@@ -45,6 +51,12 @@
           "ctime": 1776239222640,
           "url": "https://dtmobile.yunxuetang.cn/study/#/userhome",
           "title": "我的学习 - 学唐online"
+        },
+        {
+          "type": "url",
+          "ctime": 1778080566760,
+          "url": "https://missing-semester-cn.github.io/",
+          "title": "计算机教育中缺失的一课 · the missing semester of your cs education"
         }
       ],
       "title": "知识"

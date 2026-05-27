@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(rm -rf \"D:/资料整理/笔记/noteSpace/资料/资料/.git\")",
+      "Bash(rm -rf \"D:/资料整理/笔记/noteSpace/资料/资料\")"
+    ]
+  }
+}

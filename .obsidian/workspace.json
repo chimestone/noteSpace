@@ -4,40 +4,69 @@
     "type": "split",
     "children": [
       {
-        "id": "486a2cd2c26b8ee6",
+        "id": "cdd59d4ada032c9c",
         "type": "tabs",
         "children": [
           {
-            "id": "4b55e8c739be2b15",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
-                "page": 9,
-                "left": -25,
-                "top": 541,
-                "zoom": 0.60078125
-              },
-              "icon": "lucide-file-text",
-              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026"
-            }
-          },
-          {
-            "id": "ff8a570d5b50c4cf",
+            "id": "ebdf6af3f0e5bb10",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "会议大纲.md",
+                "file": "dailyRecord/2026-05-26.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "会议大纲"
+              "title": "2026-05-26"
+            }
+          },
+          {
+            "id": "96a6c40da82409a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "systemKnowledge/计算机系统基础/第1讲_数据机器级表示.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "第1讲_数据机器级表示"
+            }
+          },
+          {
+            "id": "fa180151d44404bf",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "资料/计算机系统基础/课件/L03_Intel 中央处理器.pdf",
+                "page": 9,
+                "left": -20,
+                "top": 70,
+                "zoom": 0.7999999999999999
+              },
+              "icon": "lucide-file-text",
+              "title": "L03_Intel 中央处理器"
+            }
+          },
+          {
+            "id": "5b202e97565efc45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "systemKnowledge/计算机系统基础/课件问题汇总.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "课件问题汇总"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "行可排列",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,12 +119,12 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c978e5af76b029c6",
@@ -121,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -136,7 +164,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +173,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -155,12 +182,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -217,7 +243,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273
+    "width": 420,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,68 +256,68 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
       "obsidian-git:Open Git source control": false,
       "copilot:Open Copilot Chat": false,
       "xournalpp:Create new Xournal++ note": false
     }
   },
-  "active": "aca8623bd1eeec13",
+  "active": "fa180151d44404bf",
   "lastOpenFiles": [
-    "会议大纲.md",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(四)-2026.pdf",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(三)-2026.pdf",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(二）-2026.pdf",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/d0b1f67d2afaa8968c6cf9db50cfa4f4.par.temp",
-    "OldFile/大二/大二（下）/逻辑与计算机系统设计基础/课件/6ad91b9367a6708ac84d9ca81d5ba8a3.par.temp",
-    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
-    "suddenThinking/随手记录.md",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/计算机系统基础实验报告_U2024_____姓名_202605.docx",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/44da15cc0c9fe0ec8b4a21336a53df35.par.temp",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/~$链接实验_操作指导.pptx",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/~$实验任务_实验报告_202604.docx",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/computerSystemBasicExp/exp5/requirement.md",
-    "suddenThinking/在干什么.md",
-    "systemKnowledge/逻辑与计算机系统设计/第六章 同步时序逻辑电路.md",
-    "systemKnowledge/信息论/第三章 无失真离散信源编码.md",
-    "systemKnowledge/信息论/第二章 离散信源熵.md",
-    "systemKnowledge/信息论/第二章 离散信源熵.canvas",
-    "systemKnowledge/信息论/第五章 纠错编码.md",
-    "systemKnowledge/信息论/第四章 离散信道容量.md",
-    "suddenThinking/未命名.md",
-    "index.md",
-    "copilot/memory/Recent Conversations.md",
-    "copilot/copilot-conversations/信息论行可排列@20260424_170734.md",
-    "systemKnowledge/obsidian插件.md",
-    "systemKnowledge/计算机系统基础/cat命令.md",
-    "OldFile/大二/大二（下）/计算机系统基础/实验/computerSystemBasicExp/exp4/Pragh1.md",
-    "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
-    "systemKnowledge/计算机系统基础/编译开关.md",
-    "Books/数据库系统概论.md",
-    "copilot/copilot-conversations/问候交流@20260414_115013.md",
-    "copilot/copilot-conversations/文件内容总结@20260414_200747.md",
-    "copilot/copilot-conversations/笔记文件夹总结@20260414_113834.md",
-    "ToDoList/java知识点粗读.md",
-    "Books/CSAPP.md",
-    "suddenThinking/数据库作业.md",
-    "images/Pasted image 20260417222726.png",
-    "images/e28b4c4cef1aad8d3bcb121643655a16.jpg",
-    "我的学习 - 学唐online.md",
-    "images/Pasted image 20260414093718.png",
-    "Pasted image 20260414093718.png",
-    "Pasted image 20260410163701.png",
-    "systemKnowledge/大创/思维导图.canvas",
-    "images/JAVA入门到精通.png",
-    "images/屏幕截图 2026-03-30 214359.png",
-    "images/CSAPP.png",
-    "images/屏幕截图 2026-03-30 214334.png",
-    "images/完全学会git.png",
-    "systemKnowledge/计算机系统基础/整体导图.canvas",
+    "资料/计算机系统基础/课件/L02_计算机的基本工作原理.pdf",
+    "systemKnowledge/计算机系统基础/课件问题汇总.md",
+    "systemKnowledge/计算机系统基础/第1讲_数据机器级表示.md",
+    "资料/计算机系统基础/课件/L01_宏论计算机系统基础.pdf",
+    "资料/资料/AIGCProject/文档.md",
+    "资料/资料/AIGCProject/大致方案.md",
+    "资料/资料/AIGCProject/README.md",
+    "资料/资料/AIGCProject",
+    "资料/资料",
+    "资料/计算机系统基础/课件/L07_常用机器指令.pdf",
+    "systemKnowledge/计算机系统基础/记一些记不住的.md",
+    "Pasted image 20260526203811.png",
+    "dailyRecord/2026-05-26.md",
+    "systemKnowledge/离散数学（二）/第1章 数论和密码学.md",
+    "systemKnowledge/计算机系统基础/第3讲_汇编基础与寻址方式.md",
+    "资料/计算机系统基础/课件/计算机系统基础回顾.pdf",
+    "资料/计算机系统基础/课件/L20_虚拟内存管理.pdf",
+    "资料/计算机系统基础/课件/L17_19 异常控制流.pdf",
+    "资料/计算机系统基础/课件/L15_16_程序的链接.pdf",
+    "资料/计算机系统基础/课件/L14_SIMD 指令.pdf",
+    "systemKnowledge/计算机系统基础/第7讲_程序的链接.md",
+    "systemKnowledge/计算机系统基础/第2讲_浮点数与编码陷阱.md",
+    "systemKnowledge/计算机系统基础/第4讲_C控制结构的机器级表示.md",
+    "systemKnowledge/计算机系统基础/第5讲_过程调用与栈帧.md",
+    "systemKnowledge/计算机系统基础/第8讲_程序的执行与流水线.md",
+    "systemKnowledge/计算机系统基础/第9、10讲_存储层次与IO异常.md",
+    "systemKnowledge/计算机系统基础/第6讲_复杂数据类型与缓冲区溢出.md",
+    "systemKnowledge/离散数学（二）/第2章 计数.md",
+    "systemKnowledge/计算机系统基础/未命名.md",
+    "ToDoList/任务看板.md",
+    "资料/计算机系统基础/课件_Qi/笔记_第九十讲_存储层次与IO异常.md",
+    "资料/计算机系统基础/课件_Qi/笔记_第八讲_程序的执行与流水线.md",
+    "资料/计算机系统基础/课件_Qi/笔记_第七讲_程序的链接.md",
+    "资料/计算机系统基础/课件_Qi/笔记_第六讲_复杂数据类型与缓冲区溢出.md",
+    "资料/计算机系统基础/课件_Qi/笔记_第五讲_过程调用与栈帧.md",
+    "资料/计算机系统基础/课件_Qi/笔记_第四讲_C控制结构的机器级表示.md",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
+    "systemKnowledge/计算机系统基础/整体导图.canvas",
+    "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
     "systemKnowledge/计算机系统基础/1.2 计算机系统的基本功能和基本组成.canvas",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/xzx.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/mxwx_slow.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/mxwx.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/lymz.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/202511132233(2).gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/lbw.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/hx.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/202511132233.gif",
+    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/202511132233(3).gif",
+    "systemKnowledge/信息论/第二章 离散信源熵.canvas",
+    "systemKnowledge/大创/思维导图.canvas",
     "systemKnowledge/逻辑与计算机系统设计/思维导图.canvas",
     "systemKnowledge/离散数学（二）/离散数学（二）思维导图.canvas",
     "未命名.canvas",

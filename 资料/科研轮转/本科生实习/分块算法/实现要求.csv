@@ -1,0 +1,8 @@
+分块算法,语言限制,附加描述
+AE,Rust,
+FastCDC,C/Rust,
+JC,C/Rust,
+RapidCDC,Rust,
+SS-CDC,C/Rust,特殊指令集资源可与我们沟通
+VectorCDC-AE,Rust,特殊指令集资源可与我们沟通
+VectorCDC-RAM,Rust,特殊指令集资源可与我们沟通
