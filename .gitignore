@@ -12,3 +12,6 @@ OldFile/
 # Visual Studio 缓存
 .vs/
 *.ipch
+
+# 教材 PDF（体积大）
+**/教材/*.pdf
