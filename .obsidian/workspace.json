@@ -43,9 +43,9 @@
               "state": {
                 "file": "资料/计算机系统基础/课件/L03_Intel 中央处理器.pdf",
                 "page": 19,
-                "left": -43,
-                "top": 6,
-                "zoom": 0.36250000000000004
+                "left": -11,
+                "top": 14,
+                "zoom": 1.4000000000000004
               },
               "icon": "lucide-file-text",
               "title": "L03_Intel 中央处理器"
@@ -243,7 +243,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420
+    "width": 420,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
