@@ -1,0 +1,24 @@
+{
+  "id": "conv-1779881617803-0u0qls6ji",
+  "providerId": "claude",
+  "title": "Explain checkpoint recovery steps",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779881617803,
+  "updatedAt": 1779881822859,
+  "lastResponseAt": 1779881822859,
+  "sessionId": "40d4d0e6-6f77-4810-8fb3-6f6c134b54c0",
+  "providerState": {
+    "providerSessionId": "40d4d0e6-6f77-4810-8fb3-6f6c134b54c0"
+  },
+  "currentNote": "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 495,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 27264,
+    "contextWindow": 200000,
+    "contextTokens": 27759,
+    "percentage": 14,
+    "contextWindowIsAuthoritative": true
+  }
+}

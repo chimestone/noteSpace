@@ -48,7 +48,6 @@
   "chatNoteContextTags": [],
   "enableIndexSync": true,
   "debug": true,
-  "enableEncryption": false,
   "maxSourceChunks": 30,
   "enableInlineCitations": true,
   "groqApiKey": "",
@@ -72,6 +71,26 @@
       "isBuiltIn": true,
       "core": true,
       "projectEnabled": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "gpt-5.5",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ]
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
       "capabilities": [
         "vision"
       ]
@@ -515,6 +534,7 @@
   "promptSortStrategy": "timestamp",
   "chatHistorySortStrategy": "recent",
   "projectListSortStrategy": "recent",
+  "projectsFolder": "copilot/projects",
   "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
   "inlineEditCommands": [],
   "projectList": [],
@@ -525,6 +545,7 @@
   "enableSemanticSearchV3": true,
   "enableSelfHostMode": false,
   "enableMiyo": false,
+  "miyoSearchAll": false,
   "selfHostModeValidatedAt": null,
   "selfHostValidationCount": 0,
   "selfHostUrl": "",
@@ -562,5 +583,5 @@
   "defaultSystemPromptTitle": "",
   "autoCompactThreshold": 128000,
   "convertedDocOutputFolder": "",
-  "miyoSearchAll": false
+  "_keychainVaultId": "9f8308e9"
 }

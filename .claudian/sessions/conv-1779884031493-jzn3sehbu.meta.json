@@ -1,0 +1,23 @@
+{
+  "id": "conv-1779884031493-jzn3sehbu",
+  "providerId": "claude",
+  "title": "推荐多端互通手写笔记软件",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779884031494,
+  "updatedAt": 1779886046708,
+  "lastResponseAt": 1779886046708,
+  "sessionId": "5ce53df1-4209-4cb5-86c9-2c0fae15ac33",
+  "providerState": {
+    "providerSessionId": "5ce53df1-4209-4cb5-86c9-2c0fae15ac33"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 543,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 41344,
+    "contextWindow": 200000,
+    "contextTokens": 41887,
+    "percentage": 21,
+    "contextWindowIsAuthoritative": true
+  }
+}

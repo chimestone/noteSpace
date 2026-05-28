@@ -1,0 +1,23 @@
+{
+  "id": "conv-1779850376265-kf1j15yey",
+  "providerId": "claude",
+  "title": "阅读文件内容",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779850376273,
+  "updatedAt": 1779880609230,
+  "lastResponseAt": 1779880609230,
+  "sessionId": "a9865098-c724-4188-a920-6dae7823d72d",
+  "providerState": {
+    "providerSessionId": "a9865098-c724-4188-a920-6dae7823d72d"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 1596,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 61440,
+    "contextWindow": 200000,
+    "contextTokens": 63036,
+    "percentage": 32,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ebdf6af3f0e5bb10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "dailyRecord/2026-05-26.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-05-26"
-            }
-          },
-          {
             "id": "96a6c40da82409a7",
             "type": "leaf",
             "state": {
@@ -41,28 +27,28 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "资料/计算机系统基础/课件/L03_Intel 中央处理器.pdf",
-                "page": 19,
-                "left": -16,
-                "top": 25,
-                "zoom": 0.9625000000000001
+                "file": "资料/计算机系统基础/课件/L10_12_ 函数调用.pdf",
+                "page": 24,
+                "left": -14,
+                "top": 530,
+                "zoom": 1.0875000000000001
               },
               "icon": "lucide-file-text",
-              "title": "L03_Intel 中央处理器"
+              "title": "L10_12_ 函数调用"
             }
           },
           {
-            "id": "5b202e97565efc45",
+            "id": "9c28f184307a2bbe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "systemKnowledge/计算机系统基础/课件问题汇总.md",
+                "file": "dailyRecord/2026-05-28.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "课件问题汇总"
+              "title": "2026-05-28"
             }
           }
         ],
@@ -123,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c978e5af76b029c6",
@@ -134,6 +119,16 @@
         "id": "b32004f4aad406b9",
         "type": "tabs",
         "children": [
+          {
+            "id": "6bf30768e011d603",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
           {
             "id": "ac7801bf7a4ca0cb",
             "type": "leaf",
@@ -150,12 +145,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "dailyRecord/2026-05-27.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "2026-05-27 的大纲"
             }
           },
           {
@@ -261,31 +257,35 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
       "copilot:Open Copilot Chat": false,
-      "xournalpp:Create new Xournal++ note": false
+      "xournalpp:Create new Xournal++ note": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "417b9445cd3aa893",
+  "active": "aca8623bd1eeec13",
   "lastOpenFiles": [
-    "资料/计算机系统基础/课件/L02_计算机的基本工作原理.pdf",
-    "systemKnowledge/计算机系统基础/课件问题汇总.md",
+    "dailyRecord/2026-05-27.md",
+    "dailyRecord/2026-05-28.md",
+    "资料/计算机系统基础/课件/L10_12_ 函数调用.pdf",
+    "suddenThinking/数据库作业.md",
+    "资料/计算机系统基础/往年试题/往年试题PDF.zip",
+    "资料/计算机系统基础/往年试题/pdf导出/计算机系统基础_复习提纲.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/计算机系统基础_202404_模拟题_部分参考答案.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/计算机系统基础_202404_模拟题.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/25春A卷答案.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/25春A卷.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/24秋B卷.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/24秋A卷.pdf",
+    "资料/计算机系统基础/往年试题/pdf导出/24春B卷答案.pdf",
     "systemKnowledge/计算机系统基础/第1讲_数据机器级表示.md",
-    "资料/计算机系统基础/课件/L01_宏论计算机系统基础.pdf",
+    "systemKnowledge/计算机系统基础/课件问题汇总.md",
+    "dailyRecord/2026-05-26.md",
+    "images/Pasted image 20260526203811.png",
     "资料/资料/AIGCProject/文档.md",
     "资料/资料/AIGCProject/大致方案.md",
     "资料/资料/AIGCProject/README.md",
-    "资料/资料/AIGCProject",
-    "资料/资料",
-    "资料/计算机系统基础/课件/L07_常用机器指令.pdf",
     "systemKnowledge/计算机系统基础/记一些记不住的.md",
-    "Pasted image 20260526203811.png",
-    "dailyRecord/2026-05-26.md",
     "systemKnowledge/离散数学（二）/第1章 数论和密码学.md",
     "systemKnowledge/计算机系统基础/第3讲_汇编基础与寻址方式.md",
-    "资料/计算机系统基础/课件/计算机系统基础回顾.pdf",
-    "资料/计算机系统基础/课件/L20_虚拟内存管理.pdf",
-    "资料/计算机系统基础/课件/L17_19 异常控制流.pdf",
-    "资料/计算机系统基础/课件/L15_16_程序的链接.pdf",
-    "资料/计算机系统基础/课件/L14_SIMD 指令.pdf",
     "systemKnowledge/计算机系统基础/第7讲_程序的链接.md",
     "systemKnowledge/计算机系统基础/第2讲_浮点数与编码陷阱.md",
     "systemKnowledge/计算机系统基础/第4讲_C控制结构的机器级表示.md",
@@ -300,8 +300,6 @@
     "资料/计算机系统基础/课件_Qi/笔记_第八讲_程序的执行与流水线.md",
     "资料/计算机系统基础/课件_Qi/笔记_第七讲_程序的链接.md",
     "资料/计算机系统基础/课件_Qi/笔记_第六讲_复杂数据类型与缓冲区溢出.md",
-    "资料/计算机系统基础/课件_Qi/笔记_第五讲_过程调用与栈帧.md",
-    "资料/计算机系统基础/课件_Qi/笔记_第四讲_C控制结构的机器级表示.md",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
     "systemKnowledge/计算机系统基础/整体导图.canvas",
     "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
