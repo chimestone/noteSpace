@@ -15,9 +15,9 @@
               "state": {
                 "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
                 "page": 5,
-                "left": -32,
-                "top": 62,
-                "zoom": 0.48750000000000004
+                "left": -18,
+                "top": 66,
+                "zoom": 0.815625
               },
               "icon": "lucide-file-text",
               "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026"
@@ -212,7 +212,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420
+    "width": 420,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -234,7 +235,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "aca8623bd1eeec13",
+  "active": "1765e9171f4a70f1",
   "lastOpenFiles": [
     "资料/计算机系统基础/往年试题/计算机系统基础复习题.pdf",
     "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
