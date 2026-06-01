@@ -4,55 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "cdd59d4ada032c9c",
+        "id": "13bab0ca87f8454e",
         "type": "tabs",
         "children": [
           {
-            "id": "96a6c40da82409a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "systemKnowledge/计算机系统基础/第1讲_数据机器级表示.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "第1讲_数据机器级表示"
-            }
-          },
-          {
-            "id": "fa180151d44404bf",
+            "id": "1765e9171f4a70f1",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "资料/计算机系统基础/课件/L10_12_ 函数调用.pdf",
-                "page": 24,
-                "left": -14,
-                "top": 530,
-                "zoom": 1.0875000000000001
+                "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
+                "page": 5,
+                "left": -32,
+                "top": 62,
+                "zoom": 0.48750000000000004
               },
               "icon": "lucide-file-text",
-              "title": "L10_12_ 函数调用"
-            }
-          },
-          {
-            "id": "9c28f184307a2bbe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "dailyRecord/2026-05-28.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-05-28"
+              "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,6 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +141,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026 的反向链接列表"
             }
           },
           {
@@ -178,11 +150,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026 的出链列表"
             }
           },
           {
@@ -263,43 +236,43 @@
   },
   "active": "aca8623bd1eeec13",
   "lastOpenFiles": [
-    "dailyRecord/2026-05-27.md",
-    "dailyRecord/2026-05-28.md",
-    "资料/计算机系统基础/课件/L10_12_ 函数调用.pdf",
-    "suddenThinking/数据库作业.md",
-    "资料/计算机系统基础/往年试题/往年试题PDF.zip",
-    "资料/计算机系统基础/往年试题/pdf导出/计算机系统基础_复习提纲.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/计算机系统基础_202404_模拟题_部分参考答案.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/计算机系统基础_202404_模拟题.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/25春A卷答案.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/25春A卷.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/24秋B卷.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/24秋A卷.pdf",
-    "资料/计算机系统基础/往年试题/pdf导出/24春B卷答案.pdf",
+    "资料/计算机系统基础/往年试题/计算机系统基础复习题.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/第五章 运算方法与运算器(一)-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(一)-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第五章 运算方法与运算器(二)-浮点数加法运算-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第三章 - -3.4-3.5-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第三章 - -3.1-3.3-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第七章 存储系统(一)-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(一）-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(三)-2026.pdf",
+    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(二）-2026.pdf",
+    "dailyRecord/2026-06-01.md",
+    "dailyRecord/2026-05-29.md",
+    "systemKnowledge/计算机系统基础/第3讲_汇编基础与寻址方式.md",
     "systemKnowledge/计算机系统基础/第1讲_数据机器级表示.md",
-    "systemKnowledge/计算机系统基础/课件问题汇总.md",
+    "dailyRecord/2026-05-28.md",
+    "dailyRecord/2026-05-27.md",
     "dailyRecord/2026-05-26.md",
+    "dailyRecord/2026-04-13.md",
+    "dailyRecord/2026-04-05.md",
+    "dailyRecord/2026-03-30.md",
+    "dailyRecord/2026-03-24.md",
+    "dailyRecord/2026-03-17.md",
+    "dailyRecord/2026-03-16.md",
+    "dailyRecord/2026-03-03.md",
+    "dailyRecord/2026-02-21.md",
+    "dailyRecord/2026-01-29.md",
+    "dailyRecord/2025-12-30.md",
+    "dailyRecord/2025-12-27.md",
+    "dailyRecord/2025-12-18.md",
+    "dailyRecord/2025-12-16.md",
+    "dailyRecord/2025-11-20.md",
+    "dailyRecord/2025-11-14.md",
+    "suddenThinking/数据库作业.md",
+    "systemKnowledge/计算机系统基础/课件问题汇总.md",
     "images/Pasted image 20260526203811.png",
     "资料/资料/AIGCProject/文档.md",
-    "资料/资料/AIGCProject/大致方案.md",
-    "资料/资料/AIGCProject/README.md",
-    "systemKnowledge/计算机系统基础/记一些记不住的.md",
-    "systemKnowledge/离散数学（二）/第1章 数论和密码学.md",
-    "systemKnowledge/计算机系统基础/第3讲_汇编基础与寻址方式.md",
-    "systemKnowledge/计算机系统基础/第7讲_程序的链接.md",
-    "systemKnowledge/计算机系统基础/第2讲_浮点数与编码陷阱.md",
-    "systemKnowledge/计算机系统基础/第4讲_C控制结构的机器级表示.md",
-    "systemKnowledge/计算机系统基础/第5讲_过程调用与栈帧.md",
-    "systemKnowledge/计算机系统基础/第8讲_程序的执行与流水线.md",
-    "systemKnowledge/计算机系统基础/第9、10讲_存储层次与IO异常.md",
-    "systemKnowledge/计算机系统基础/第6讲_复杂数据类型与缓冲区溢出.md",
-    "systemKnowledge/离散数学（二）/第2章 计数.md",
-    "systemKnowledge/计算机系统基础/未命名.md",
-    "ToDoList/任务看板.md",
-    "资料/计算机系统基础/课件_Qi/笔记_第九十讲_存储层次与IO异常.md",
-    "资料/计算机系统基础/课件_Qi/笔记_第八讲_程序的执行与流水线.md",
-    "资料/计算机系统基础/课件_Qi/笔记_第七讲_程序的链接.md",
-    "资料/计算机系统基础/课件_Qi/笔记_第六讲_复杂数据类型与缓冲区溢出.md",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
     "systemKnowledge/计算机系统基础/整体导图.canvas",
     "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
