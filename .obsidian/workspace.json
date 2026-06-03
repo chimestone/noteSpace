@@ -13,17 +13,60 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
-                "page": 5,
-                "left": -18,
-                "top": 66,
-                "zoom": 0.815625
+                "file": "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+                "page": 377,
+                "left": -14,
+                "top": 75,
+                "zoom": 1.1347554958929762
               },
               "icon": "lucide-file-text",
-              "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026"
+              "title": "数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk)"
+            }
+          },
+          {
+            "id": "8f10f84c312d9a0d",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.zhihu.com/",
+                "title": "首页 - 知乎",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "首页 - 知乎"
+            }
+          },
+          {
+            "id": "3dfb9c7d2a214840",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dailyRecord/2026-06-03.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-03"
+            }
+          },
+          {
+            "id": "cb2731978f3d5693",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "suddenThinking/数据库作业.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "数据库作业"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -80,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c978e5af76b029c6",
@@ -131,7 +175,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +184,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -150,12 +193,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -212,8 +254,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 420,
-    "collapsed": true
+    "width": 420
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,26 +276,37 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "1765e9171f4a70f1",
+  "active": "aca8623bd1eeec13",
   "lastOpenFiles": [
-    "资料/计算机系统基础/往年试题/计算机系统基础复习题.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(二)-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/第五章 运算方法与运算器(一)-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础- 第九章 中央处理器(一)-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第五章 运算方法与运算器(二)-浮点数加法运算-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第三章 - -3.4-3.5-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第三章 - -3.1-3.3-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第七章 存储系统(一)-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(一）-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(三)-2026.pdf",
-    "资料/逻辑与计算机系统设计基础/课件/逻辑与计算机系统设计基础-第六章  同步时序逻辑电路(二）-2026.pdf",
-    "dailyRecord/2026-06-01.md",
+    "E-book/数据库系统概论(第6版) (王珊,杜小勇,陈红) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "dailyRecord/2026-06-03.md",
+    "资料/机器学习/机器学习大作业",
+    "资料/机器学习",
+    "资料/机器学习大作业/机器学习大作业",
+    "资料/机器学习大作业",
+    "资料/人工智能安全/实验/outputs/对抗攻击实验_FGSM_BIM_PGD_参考代码.zip",
+    "资料/人工智能安全/实验/outputs/人工智能应用安全_课程报告_U202414869_韩轩.docx",
+    "资料/人工智能安全/实验/outputs/lenet_mnist.pth",
+    "资料/人工智能安全/实验/outputs/adv_examples_grid.png",
+    "资料/人工智能安全/实验/outputs/accuracy_comparison.png",
+    "资料/人工智能安全/实验/outputs/2-人工智能应用安全源码_U202414869_韩轩.zip",
+    "资料/人工智能安全/实验/outputs/1-人工智能应用安全_课程报告_U202414869_韩轩.pdf",
+    "资料/人工智能安全/实验/人工智能应用安全_实验报告模板.docx",
+    "资料/人工智能安全/实验/README.md",
+    "资料/人工智能安全/人工智能安全/outputs/adv_examples_grid.png",
+    "资料/人工智能安全/人工智能安全/outputs/accuracy_comparison.png",
+    "资料/人工智能安全/人工智能安全/README.md",
+    "suddenThinking/数据库作业.md",
+    "dailyRecord/2026-05-26.md",
+    "dailyRecord/2026-05-27.md",
+    "dailyRecord/2026-05-28.md",
     "dailyRecord/2026-05-29.md",
+    "dailyRecord/2026-06-01.md",
+    "ToDoList/任务看板.md",
+    "资料/计算机系统基础/实验/myreport/release.png",
+    "资料/计算机系统基础/实验/myreport/debug.png",
     "systemKnowledge/计算机系统基础/第3讲_汇编基础与寻址方式.md",
     "systemKnowledge/计算机系统基础/第1讲_数据机器级表示.md",
-    "dailyRecord/2026-05-28.md",
-    "dailyRecord/2026-05-27.md",
-    "dailyRecord/2026-05-26.md",
     "dailyRecord/2026-04-13.md",
     "dailyRecord/2026-04-05.md",
     "dailyRecord/2026-03-30.md",
@@ -268,12 +320,7 @@
     "dailyRecord/2025-12-27.md",
     "dailyRecord/2025-12-18.md",
     "dailyRecord/2025-12-16.md",
-    "dailyRecord/2025-11-20.md",
-    "dailyRecord/2025-11-14.md",
-    "suddenThinking/数据库作业.md",
-    "systemKnowledge/计算机系统基础/课件问题汇总.md",
     "images/Pasted image 20260526203811.png",
-    "资料/资料/AIGCProject/文档.md",
     "systemKnowledge/计算机系统基础/知识暂存区.canvas",
     "systemKnowledge/计算机系统基础/整体导图.canvas",
     "systemKnowledge/计算机系统基础/1.1 计算机发展历程.canvas",
@@ -281,12 +328,6 @@
     "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/xzx.gif",
     "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/mxwx_slow.gif",
     "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/mxwx.gif",
-    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/lymz.gif",
-    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/202511132233(2).gif",
-    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/lbw.gif",
-    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/hx.gif",
-    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/202511132233.gif",
-    "资料/AIGCProject/孩子们也是开始玩图了/output/小猫张嘴/表情包 gif/202511132233(3).gif",
     "systemKnowledge/信息论/第二章 离散信源熵.canvas",
     "systemKnowledge/大创/思维导图.canvas",
     "systemKnowledge/逻辑与计算机系统设计/思维导图.canvas",
